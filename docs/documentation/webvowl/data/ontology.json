@@ -1,0 +1,3013 @@
+{
+  "_comment" : "Created with OWL2VOWL (version 0.3.5), http://vowl.visualdataweb.org",
+  "header" : {
+    "languages" : [ "en", "undefined" ],
+    "baseIris" : [ "http://www.w3.org/1999/02/22-rdf-syntax-ns", "http://example.org/ontology", "http://www.w3.org/2002/07/owl", "http://www.w3.org/2000/01/rdf-schema", "http://www.co-ode.org/ontologies/ont.owl", "http://purl.org/dc/terms", "http://www.w3.org/2001/XMLSchema" ],
+    "title" : {
+      "en" : "Smart Tourism and Recommendations Ontology"
+    },
+    "iri" : "http://example.org/ontology",
+    "version" : "1.0",
+    "author" : [ "Daniel García" ],
+    "description" : {
+      "en" : "Models key tourism elements such as attractions, events, hotels, restaurants, and transport in a structured way. It facilitates the analysis and reuse of tourism knowledge in urban environments for smart applications."
+    },
+    "labels" : {
+      "en" : "Smart Tourism Ontology"
+    },
+    "comments" : {
+      "en" : "Ontology that models tourism-related data such as cities, events, hotels, and transport for smart recommendations."
+    },
+    "other" : {
+      "creator" : [ {
+        "identifier" : "creator",
+        "language" : "en",
+        "value" : "Daniel García",
+        "type" : "label"
+      } ],
+      "created" : [ {
+        "identifier" : "created",
+        "language" : "undefined",
+        "value" : "2025-04-01",
+        "type" : "label"
+      } ],
+      "versionInfo" : [ {
+        "identifier" : "versionInfo",
+        "language" : "undefined",
+        "value" : "1.0",
+        "type" : "label"
+      } ],
+      "title" : [ {
+        "identifier" : "title",
+        "language" : "en",
+        "value" : "Smart Tourism and Recommendations Ontology",
+        "type" : "label"
+      } ]
+    }
+  },
+  "namespace" : [ ],
+  "class" : [ {
+    "id" : "1",
+    "type" : "owl:Class"
+  }, {
+    "id" : "17",
+    "type" : "owl:Class"
+  }, {
+    "id" : "33",
+    "type" : "owl:Class"
+  }, {
+    "id" : "40",
+    "type" : "owl:Class"
+  }, {
+    "id" : "42",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "31",
+    "type" : "owl:Class"
+  }, {
+    "id" : "7",
+    "type" : "owl:Class"
+  }, {
+    "id" : "15",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "50",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "8",
+    "type" : "owl:Thing"
+  }, {
+    "id" : "51",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "11",
+    "type" : "owl:Class"
+  }, {
+    "id" : "2",
+    "type" : "owl:Class"
+  }, {
+    "id" : "54",
+    "type" : "owl:Class"
+  }, {
+    "id" : "4",
+    "type" : "owl:Class"
+  }, {
+    "id" : "44",
+    "type" : "owl:Class"
+  }, {
+    "id" : "3",
+    "type" : "owl:Class"
+  }, {
+    "id" : "63",
+    "type" : "owl:Class"
+  }, {
+    "id" : "5",
+    "type" : "owl:Class"
+  }, {
+    "id" : "29",
+    "type" : "owl:Class"
+  }, {
+    "id" : "67",
+    "type" : "owl:Class"
+  }, {
+    "id" : "65",
+    "type" : "owl:Class"
+  }, {
+    "id" : "37",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "77",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "79",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "26",
+    "type" : "owl:Class"
+  }, {
+    "id" : "53",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "39",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "75",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "80",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "59",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "22",
+    "type" : "owl:intersectionOf"
+  }, {
+    "id" : "41",
+    "type" : "owl:Class"
+  }, {
+    "id" : "82",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "83",
+    "type" : "rdfs:Datatype"
+  }, {
+    "id" : "13",
+    "type" : "owl:Class"
+  }, {
+    "id" : "10",
+    "type" : "owl:Class"
+  }, {
+    "id" : "72",
+    "type" : "owl:Class"
+  }, {
+    "id" : "28",
+    "type" : "owl:Class"
+  }, {
+    "id" : "20",
+    "type" : "owl:Class"
+  }, {
+    "id" : "35",
+    "type" : "owl:Class"
+  }, {
+    "id" : "24",
+    "type" : "owl:Class"
+  }, {
+    "id" : "18",
+    "type" : "owl:Class"
+  } ],
+  "classAttribute" : [ {
+    "iri" : "http://example.org/ontology#Restaurant",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Restaurant",
+      "en" : "Restaurant"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteSaborValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteSaborValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteSaborSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteSaborSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteSaborCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteSaborCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteSaborSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteSaborSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteSaborMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteSaborMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteTradiciónToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteTradiciónToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteFusiónMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteFusiónMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteDeliciaValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteDeliciaValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteGourmetMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteGourmetMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#RestauranteSaborZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "RestauranteSaborZaragoza"
+      }
+    } ],
+    "subClasses" : [ "3", "4", "5" ],
+    "comment" : {
+      "en" : "A place where meals are prepared and served to customers."
+    },
+    "id" : "1",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://example.org/ontology#Museum",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Museum",
+      "undefined" : "Museum"
+    },
+    "comment" : {
+      "undefined" : "A building or institution that houses and displays artifacts and exhibitions."
+    },
+    "id" : "17",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#NamedEntity",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NamedEntity",
+      "en" : "NamedEntity"
+    },
+    "subClasses" : [ "2" ],
+    "comment" : {
+      "en" : "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."
+    },
+    "attributes" : [ "external" ],
+    "id" : "33"
+  }, {
+    "iri" : "http://example.org/ontology#HighRatedHotel",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRatedHotel",
+      "en" : "HighRatedHotel"
+    },
+    "comment" : {
+      "en" : "A hotel with a high evaluation based on user feedback or rating metrics."
+    },
+    "id" : "40",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#HotelInCity",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HotelInCity",
+      "en" : "HotelInCity"
+    },
+    "intersection" : [ "41" ],
+    "comment" : {
+      "en" : "A hotel located within an urban area."
+    },
+    "attributes" : [ "intersection", "external" ],
+    "id" : "42",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://example.org/ontology#BusTransport",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BusTransport",
+      "en" : "BusTransport"
+    },
+    "comment" : {
+      "en" : "Public or private transportation via buses."
+    },
+    "id" : "31",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://example.org/ontology#City",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/City",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "City",
+      "en" : "City"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/ontology#Pamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Pamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Madrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Madrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Valencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Valencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Zaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Zaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Cádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Cádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Málaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Málaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#SanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "SanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Barcelona",
+      "baseIri" : "http://example.org/ontology",
+      "annotations" : {
+        "sameAs" : [ {
+          "identifier" : "sameAs",
+          "language" : "en",
+          "value" : "http://dbpedia.org/resource/Barcelona",
+          "type" : "label"
+        } ]
+      },
+      "labels" : {
+        "IRI-based" : "Barcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Sevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Sevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Toledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Toledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Bilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Bilbao"
+      }
+    } ],
+    "subClasses" : [ "22", "20", "26" ],
+    "comment" : {
+      "en" : "An urban area that can host events, services, and attractions."
+    },
+    "id" : "7"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "15",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "50",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#Thing",
+    "baseIri" : "http://owl2vowl.de",
+    "id" : "8",
+    "label" : {
+      "undefined" : "Thing"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "51",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://example.org/ontology#Event",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Event",
+      "undefined" : "Event"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/ontology#ConciertoToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ConciertoMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ConciertoMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FestivalSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FestivalSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#FeriaMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "FeriaMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CarnavalBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CarnavalBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CongresoZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CongresoZaragoza"
+      }
+    } ],
+    "subClasses" : [ "24", "13", "10" ],
+    "comment" : {
+      "en" : "A scheduled occasion such as a concert, festival, or sports competition."
+    },
+    "id" : "11",
+    "superClasses" : [ "44", "2" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#RatedEntity",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RatedEntity",
+      "en" : "RatedEntity"
+    },
+    "subClasses" : [ "1", "41", "11" ],
+    "comment" : {
+      "en" : "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "2",
+    "superClasses" : [ "33" ]
+  }, {
+    "iri" : "http://example.org/ontology#HistoricalSite",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HistoricalSite",
+      "en" : "HistoricalSite"
+    },
+    "comment" : {
+      "undefined" : "A place of historical significance, such as a monument or landmark."
+    },
+    "id" : "54",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://example.org/ontology#HighRatedRestaurant",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "HighRatedRestaurant",
+      "en" : "HighRatedRestaurant"
+    },
+    "comment" : {
+      "en" : "A restaurant with a high user rating or recognized quality."
+    },
+    "id" : "4",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#TypedEntity",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "TypedEntity",
+      "en" : "TypedEntity"
+    },
+    "subClasses" : [ "29", "11", "18" ],
+    "comment" : {
+      "en" : "An entity that is classified by type, such as restaurants or attractions."
+    },
+    "attributes" : [ "external" ],
+    "id" : "44"
+  }, {
+    "iri" : "http://example.org/ontology#FastFoodRestaurant",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "FastFoodRestaurant",
+      "en" : "FastFoodRestaurant"
+    },
+    "comment" : {
+      "en" : "A restaurant that serves quick and inexpensive meals."
+    },
+    "id" : "3",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RecommendedHotel",
+      "en" : "RecommendedHotel"
+    },
+    "comment" : {
+      "en" : "Recommended Hotel"
+    },
+    "attributes" : [ "external" ],
+    "id" : "63",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://example.org/ontology#GourmetRestaurant",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "GourmetRestaurant",
+      "en" : "GourmetRestaurant"
+    },
+    "comment" : {
+      "en" : "A high-quality restaurant offering refined cuisine."
+    },
+    "id" : "5",
+    "superClasses" : [ "1" ]
+  }, {
+    "iri" : "http://example.org/ontology#Transport",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Transport",
+      "en" : "Transport"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/ontology#Transport_6",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_6"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_36",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_36"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_37",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_37"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_5",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_5"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_38",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_38"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_4",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_4"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_39",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_39"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_3",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_3"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_32",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_32"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_9",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_9"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_33",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_33"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_8",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_8"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_34",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_34"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_35",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_35"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_7",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_7"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_30",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_30"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_31",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_31"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_100",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_100"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_2",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_2"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_1",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_1"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_47",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_47"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_48",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_48"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_49",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_49"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_43",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_43"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_44",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_44"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_45",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_45"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_46",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_46"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_40",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_40"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_41",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_41"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_42",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_42"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_14",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_14"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_15",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_15"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_16",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_16"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_17",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_17"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_98",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_98"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_10",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_10"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_11",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_11"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_99",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_99"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_12",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_12"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_13",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_13"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_94",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_94"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_95",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_95"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_96",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_96"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_97",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_97"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_90",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_90"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_91",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_91"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_92",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_92"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_93",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_93"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_18",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_18"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_19",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_19"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_25",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_25"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_26",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_26"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_27",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_27"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_28",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_28"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_21",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_21"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_22",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_22"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_23",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_23"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_24",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_24"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_20",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_20"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_29",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_29"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_76",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_76"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_77",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_77"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_78",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_78"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_79",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_79"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_72",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_72"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_73",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_73"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_74",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_74"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_75",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_75"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_70",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_70"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_71",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_71"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_87",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_87"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_88",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_88"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_89",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_89"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_83",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_83"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_84",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_84"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_85",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_85"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_86",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_86"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_80",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_80"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_81",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_81"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_82",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_82"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_58",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_58"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_59",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_59"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_54",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_54"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_55",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_55"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_56",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_56"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_57",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_57"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_50",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_50"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_51",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_51"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_52",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_52"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_53",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_53"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_69",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_69"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_65",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_65"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_66",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_66"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_67",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_67"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_68",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_68"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_61",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_61"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_62",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_62"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_63",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_63"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_64",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_64"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#Transport_60",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "Transport_60"
+      }
+    } ],
+    "subClasses" : [ "31", "28", "35" ],
+    "comment" : {
+      "en" : "A category encompassing means of travel or transit."
+    },
+    "id" : "29",
+    "superClasses" : [ "44" ]
+  }, {
+    "iri" : "http://example.org/ontology#LuxuryHotel",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "LuxuryHotel",
+      "en" : "LuxuryHotel"
+    },
+    "comment" : {
+      "en" : "A high-end hotel offering premium services and accommodations."
+    },
+    "id" : "67",
+    "superClasses" : [ "41" ]
+  }, {
+    "iri" : "http://example.org/ontology#NaturalAttraction",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "NaturalAttraction",
+      "en" : "NaturalAttraction"
+    },
+    "comment" : {
+      "en" : "A natural site or feature of interest to visitors, such as mountains or parks."
+    },
+    "id" : "65",
+    "superClasses" : [ "18" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "37",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "77",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "79",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://example.org/ontology#CapitalCity",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CapitalCity",
+      "en" : "CapitalCity"
+    },
+    "comment" : {
+      "en" : "A city that serves as the capital of a country or region."
+    },
+    "id" : "26",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "53",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "39",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "75",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#integer",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "80",
+    "label" : {
+      "IRI-based" : "integer"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#string",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "59",
+    "label" : {
+      "IRI-based" : "string"
+    }
+  }, {
+    "iri" : "http://example.org/ontology#CityWithEvents",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CityWithEvents",
+      "en" : "CityWithEvents"
+    },
+    "subClasses" : [ "72" ],
+    "intersection" : [ "7" ],
+    "comment" : {
+      "en" : "A city that organizes at least one event."
+    },
+    "attributes" : [ "intersection" ],
+    "id" : "22",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://example.org/ontology#Hotel",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "annotations" : {
+      "seeAlso" : [ {
+        "identifier" : "seeAlso",
+        "language" : "undefined",
+        "value" : "http://dbpedia.org/resource/Hotel",
+        "type" : "iri"
+      } ]
+    },
+    "label" : {
+      "IRI-based" : "Hotel",
+      "en" : "Hotel"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/ontology#HotelSolBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalacePamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalacePamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelSolBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelSolBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelRoyalCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelRoyalCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelDelMarZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelDelMarZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelVistaMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelVistaMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#HotelPalaceBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "HotelPalaceBarcelona"
+      }
+    } ],
+    "subClasses" : [ "42", "63", "40", "67" ],
+    "comment" : {
+      "en" : "A commercial establishment offering lodging and other services to travelers."
+    },
+    "id" : "41",
+    "superClasses" : [ "2" ]
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "82",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://www.w3.org/2001/XMLSchema#double",
+    "baseIri" : "http://www.w3.org/2001/XMLSchema",
+    "id" : "83",
+    "label" : {
+      "IRI-based" : "double"
+    }
+  }, {
+    "iri" : "http://example.org/ontology#SportsEvent",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "SportsEvent",
+      "en" : "SportsEvent"
+    },
+    "comment" : {
+      "en" : "A competitive or recreational sporting event."
+    },
+    "id" : "13",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://example.org/ontology#MusicFestival",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "MusicFestival",
+      "en" : "MusicFestival"
+    },
+    "comment" : {
+      "undefined" : "A multi-performance event dedicated to musical entertainment."
+    },
+    "id" : "10",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#BudgetHotel",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "BudgetHotel",
+      "en" : "BudgetHotel"
+    },
+    "comment" : {
+      "undefined" : "A hotel that offers 5-star service at a price lower than 100€ per night."
+    },
+    "attributes" : [ "external" ],
+    "id" : "72",
+    "superClasses" : [ "22" ]
+  }, {
+    "iri" : "http://example.org/ontology#RailTransport",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "RailTransport",
+      "en" : "RailTransport"
+    },
+    "comment" : {
+      "en" : "A form of transportation using trains or railways."
+    },
+    "id" : "28",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://example.org/ontology#CityWithTransport",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CityWithTransport"
+    },
+    "comment" : {
+      "en" : "CityWithTransport"
+    },
+    "id" : "20",
+    "superClasses" : [ "7" ]
+  }, {
+    "iri" : "http://example.org/ontology#AirTransport",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "AirTransport",
+      "en" : "AirTransport"
+    },
+    "comment" : {
+      "en" : "A mode of transportation via aircraft, such as planes or helicopters."
+    },
+    "id" : "35",
+    "superClasses" : [ "29" ]
+  }, {
+    "iri" : "http://example.org/ontology#CulturalEvent",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "CulturalEvent",
+      "en" : "CulturalEvent"
+    },
+    "comment" : {
+      "en" : "An event related to cultural expression, tradition, or art."
+    },
+    "id" : "24",
+    "superClasses" : [ "11" ]
+  }, {
+    "iri" : "http://example.org/ontology#Attraction",
+    "baseIri" : "http://example.org/ontology",
+    "instances" : 0,
+    "label" : {
+      "IRI-based" : "Attraction",
+      "en" : "Attraction"
+    },
+    "individuals" : [ {
+      "iri" : "http://example.org/ontology#PalacioBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioValencia",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioValencia"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParquePamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParquePamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloSanSebastián",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloSanSebastián"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralCádiz",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralCádiz"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralSevilla",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralSevilla"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoPamplona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoPamplona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloToledo",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloToledo"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#ParqueBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "ParqueBarcelona"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioZaragoza",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioZaragoza"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#MuseoMadrid",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "MuseoMadrid"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CatedralMálaga",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CatedralMálaga"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#PalacioBilbao",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "PalacioBilbao"
+      }
+    }, {
+      "iri" : "http://example.org/ontology#CastilloBarcelona",
+      "baseIri" : "http://example.org/ontology",
+      "labels" : {
+        "IRI-based" : "CastilloBarcelona"
+      }
+    } ],
+    "subClasses" : [ "65", "17", "54" ],
+    "comment" : {
+      "en" : "A place or feature that attracts tourists or visitors"
+    },
+    "id" : "18",
+    "superClasses" : [ "44" ]
+  } ],
+  "property" : [ {
+    "id" : "0",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "6",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "9",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "12",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "14",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "19",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "21",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "23",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "25",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "27",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "30",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "32",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "34",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "36",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "38",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "43",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "45",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "46",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "47",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "48",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "49",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "52",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "55",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "56",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "57",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "16",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "58",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "60",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "61",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "62",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "64",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "66",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "68",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "69",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "70",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "71",
+    "type" : "rdfs:SubClassOf"
+  }, {
+    "id" : "73",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "74",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "76",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "78",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "81",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "84",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "85",
+    "type" : "owl:datatypeProperty"
+  }, {
+    "id" : "86",
+    "type" : "owl:objectProperty"
+  }, {
+    "id" : "87",
+    "type" : "owl:datatypeProperty"
+  } ],
+  "propertyAttribute" : [ {
+    "range" : "2",
+    "domain" : "1",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "0"
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#hasLocation",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "range" : "8",
+    "label" : {
+      "IRI-based" : "hasLocation",
+      "en" : "hasLocation"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "6"
+  }, {
+    "range" : "11",
+    "domain" : "10",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "9"
+  }, {
+    "range" : "11",
+    "domain" : "13",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "12"
+  }, {
+    "iri" : "http://www.w3.org/2002/07/owl#topObjectProperty",
+    "baseIri" : "http://www.w3.org/2002/07/owl",
+    "range" : "15",
+    "label" : {
+      "IRI-based" : "topObjectProperty"
+    },
+    "domain" : "15",
+    "subproperty" : [ "16" ],
+    "attributes" : [ "object", "external" ],
+    "id" : "14"
+  }, {
+    "range" : "7",
+    "domain" : "20",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "19"
+  }, {
+    "range" : "7",
+    "domain" : "22",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "21"
+  }, {
+    "range" : "11",
+    "domain" : "24",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "23"
+  }, {
+    "range" : "7",
+    "domain" : "26",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "25"
+  }, {
+    "range" : "29",
+    "domain" : "28",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "27"
+  }, {
+    "range" : "29",
+    "domain" : "31",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "30"
+  }, {
+    "range" : "33",
+    "domain" : "2",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "32"
+  }, {
+    "range" : "29",
+    "domain" : "35",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "34"
+  }, {
+    "iri" : "http://example.org/ontology#averagePrice",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "37",
+    "label" : {
+      "IRI-based" : "averagePrice",
+      "en" : "averagePrice"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The average price associated with the item (for example, a typical selling price)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "36"
+  }, {
+    "iri" : "http://example.org/ontology#name",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "39",
+    "label" : {
+      "IRI-based" : "name",
+      "en" : "name"
+    },
+    "cardinality" : "1",
+    "domain" : "33",
+    "comment" : {
+      "en" : "The name or title of the item."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "38"
+  }, {
+    "range" : "44",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "43"
+  }, {
+    "range" : "44",
+    "domain" : "29",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "45"
+  }, {
+    "range" : "44",
+    "domain" : "18",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "46"
+  }, {
+    "range" : "1",
+    "domain" : "3",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "47"
+  }, {
+    "range" : "1",
+    "domain" : "5",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "48"
+  }, {
+    "range" : "1",
+    "domain" : "4",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "49"
+  }, {
+    "iri" : "http://example.org/ontology#localization",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "53",
+    "label" : {
+      "IRI-based" : "localization",
+      "en" : "localization"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "The geographic location or address of the item."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "52"
+  }, {
+    "iri" : "http://example.org/ontology#typeHotel",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "51",
+    "label" : {
+      "IRI-based" : "typeHotel",
+      "en" : "typeHotel"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "The type or category of a hotel (e.g., resort, hostel, bed-and-breakfast)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "55"
+  }, {
+    "range" : "18",
+    "domain" : "54",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "56"
+  }, {
+    "iri" : "http://example.org/ontology#typeCocina",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "50",
+    "label" : {
+      "IRI-based" : "typeCocina",
+      "en" : "typeCocina"
+    },
+    "domain" : "1",
+    "comment" : {
+      "en" : "The type of cuisine offered (e.g., Italian, Chinese)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "57"
+  }, {
+    "iri" : "http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy",
+    "baseIri" : "http://www.co-ode.org/ontologies/ont.owl",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "isOrganizedBy",
+      "undefined" : "isOrgenizedBy"
+    },
+    "superproperty" : [ "14" ],
+    "domain" : "11",
+    "comment" : {
+      "en" : "Indicates the city or organization responsible for organizing a given event."
+    },
+    "attributes" : [ "object", "external" ],
+    "id" : "16"
+  }, {
+    "iri" : "http://example.org/ontology#type",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "59",
+    "label" : {
+      "IRI-based" : "type",
+      "en" : "type"
+    },
+    "domain" : "44",
+    "comment" : {
+      "en" : "A general type or category of the item."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "58"
+  }, {
+    "range" : "18",
+    "domain" : "17",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "60"
+  }, {
+    "range" : "41",
+    "domain" : "40",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "61"
+  }, {
+    "range" : "41",
+    "domain" : "63",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "62"
+  }, {
+    "range" : "18",
+    "domain" : "65",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "64"
+  }, {
+    "range" : "41",
+    "domain" : "67",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "66"
+  }, {
+    "range" : "2",
+    "domain" : "11",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "68"
+  }, {
+    "range" : "2",
+    "domain" : "41",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "69"
+  }, {
+    "range" : "41",
+    "domain" : "42",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "70"
+  }, {
+    "range" : "22",
+    "domain" : "72",
+    "attributes" : [ "object", "anonymous" ],
+    "id" : "71"
+  }, {
+    "iri" : "http://example.org/ontology#hasTransport",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "29",
+    "label" : {
+      "IRI-based" : "hasTransport",
+      "en" : "hasTransport"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Has transport"
+    },
+    "attributes" : [ "object" ],
+    "id" : "73"
+  }, {
+    "iri" : "http://example.org/ontology#priceNight",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "75",
+    "label" : {
+      "IRI-based" : "priceNight",
+      "en" : "priceNight"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "The price per night (for example, a nightly rate for lodging)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "74"
+  }, {
+    "iri" : "http://example.org/ontology#company",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "77",
+    "label" : {
+      "IRI-based" : "company",
+      "en" : "company"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "The company or organization associated with the item (e.g., its provider or organizer)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "76"
+  }, {
+    "iri" : "http://example.org/ontology#locatedIn",
+    "inverse" : "6",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "7",
+    "label" : {
+      "IRI-based" : "locatedIn",
+      "en" : "locatedIn"
+    },
+    "domain" : "8",
+    "comment" : {
+      "en" : "Relates an entity to the city where it is geographically situated"
+    },
+    "attributes" : [ "object" ],
+    "id" : "78"
+  }, {
+    "iri" : "http://example.org/ontology#assessment",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "82",
+    "label" : {
+      "IRI-based" : "assessment",
+      "en" : "assessment"
+    },
+    "domain" : "2",
+    "comment" : {
+      "en" : "A rating or evaluation score for the item (often based on user reviews or quality)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "81"
+  }, {
+    "iri" : "http://example.org/ontology#averageCost",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "83",
+    "label" : {
+      "IRI-based" : "averageCost",
+      "en" : "averageCost"
+    },
+    "domain" : "29",
+    "comment" : {
+      "en" : "The average cost associated with the item or service."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "84"
+  }, {
+    "iri" : "http://example.org/ontology#stars",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "80",
+    "label" : {
+      "IRI-based" : "stars",
+      "en" : "stars"
+    },
+    "domain" : "41",
+    "comment" : {
+      "en" : "The star rating of an accommodation (e.g., a 5-star rating)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "85"
+  }, {
+    "iri" : "http://example.org/ontology#organizesEvent",
+    "inverse" : "16",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "11",
+    "label" : {
+      "IRI-based" : "organizesEvent",
+      "en" : "organizesEvent"
+    },
+    "domain" : "7",
+    "comment" : {
+      "en" : "Indicates that a city is responsible for organizing a given event."
+    },
+    "attributes" : [ "object" ],
+    "id" : "86"
+  }, {
+    "iri" : "http://example.org/ontology#date",
+    "baseIri" : "http://example.org/ontology",
+    "range" : "79",
+    "label" : {
+      "IRI-based" : "date",
+      "undefined" : "date"
+    },
+    "domain" : "11",
+    "comment" : {
+      "en" : "A date associated with the item (e.g., the date on which an event occurs)."
+    },
+    "attributes" : [ "datatype" ],
+    "id" : "87"
+  } ]
+}

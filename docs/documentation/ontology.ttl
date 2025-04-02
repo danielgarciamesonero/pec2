@@ -1,0 +1,4326 @@
+@prefix : <http://example.org/ontology#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix xml: <http://www.w3.org/XML/1998/namespace> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@base <http://example.org/ontology#> .
+
+<http://example.org/ontology> rdf:type owl:Ontology ;
+                               <http://purl.org/dc/elements/1.1/description> "Models key tourism elements such as attractions, events, hotels, restaurants, and transport in a structured way. It facilitates the analysis and reuse of tourism knowledge in urban environments for smart applications."@en ;
+                               <http://purl.org/dc/elements/1.1/title> "Smart Tourism and Recommendations Ontology"@en ;
+                               <http://purl.org/dc/terms/created> "2025-04-01"^^xsd:date ;
+                               <http://purl.org/dc/terms/creator> "Daniel García"@en ;
+                               rdfs:comment "Ontology that models tourism-related data such as cities, events, hotels, and transport for smart recommendations."@en ;
+                               rdfs:label "Smart Tourism Ontology"@en ;
+                               owl:versionInfo 1.0 .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/dcam/rangeIncludes
+<http://purl.org/dc/dcam/rangeIncludes> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/contributor
+<http://purl.org/dc/elements/1.1/contributor> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/coverage
+<http://purl.org/dc/elements/1.1/coverage> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/creator
+<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/format
+<http://purl.org/dc/elements/1.1/format> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/identifier
+<http://purl.org/dc/elements/1.1/identifier> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/language
+<http://purl.org/dc/elements/1.1/language> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/publisher
+<http://purl.org/dc/elements/1.1/publisher> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/relation
+<http://purl.org/dc/elements/1.1/relation> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/rights
+<http://purl.org/dc/elements/1.1/rights> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/source
+<http://purl.org/dc/elements/1.1/source> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/subject
+<http://purl.org/dc/elements/1.1/subject> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/type
+<http://purl.org/dc/elements/1.1/type> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/abstract
+<http://purl.org/dc/terms/abstract> rdf:type owl:AnnotationProperty ;
+                                    rdfs:comment "A summary of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Abstract"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ,
+                                                       <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/accessRights
+<http://purl.org/dc/terms/accessRights> rdf:type owl:AnnotationProperty ;
+                                        <http://purl.org/dc/terms/description> "Access Rights may include information regarding access or restrictions based on privacy, security, or other policies."@en ;
+                                        rdfs:comment "Information about who access the resource or an indication of its security status."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                        rdfs:label "Access Rights"@en ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> ,
+                                                           <http://purl.org/dc/terms/rights> .
+
+
+###  http://purl.org/dc/terms/accrualMethod
+<http://purl.org/dc/terms/accrualMethod> rdf:type owl:AnnotationProperty ;
+                                         <http://purl.org/dc/terms/description> "Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)]."@en ;
+                                         rdfs:comment "The method by which items are added to a collection."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                         rdfs:label "Accrual Method"@en ;
+                                         rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+
+
+###  http://purl.org/dc/terms/accrualPeriodicity
+<http://purl.org/dc/terms/accrualPeriodicity> rdf:type owl:AnnotationProperty ;
+                                              <http://purl.org/dc/terms/description> "Recommended practice is to use a value from the Collection Description Frequency Vocabulary [[DCMI-COLLFREQ](https://dublincore.org/groups/collections/frequency/)]."@en ;
+                                              rdfs:comment "The frequency with which items are added to a collection."@en ;
+                                              rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                              rdfs:label "Accrual Periodicity"@en ;
+                                              rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+
+
+###  http://purl.org/dc/terms/accrualPolicy
+<http://purl.org/dc/terms/accrualPolicy> rdf:type owl:AnnotationProperty ;
+                                         <http://purl.org/dc/terms/description> "Recommended practice is to use a value from the Collection Description Accrual Policy Vocabulary [[DCMI-ACCRUALPOLICY](https://dublincore.org/groups/collections/accrual-policy/)]."@en ;
+                                         rdfs:comment "The policy governing the addition of items to a collection."@en ;
+                                         rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                         rdfs:label "Accrual Policy"@en ;
+                                         rdfs:domain <http://purl.org/dc/dcmitype/Collection> .
+
+
+###  http://purl.org/dc/terms/alternative
+<http://purl.org/dc/terms/alternative> rdf:type owl:AnnotationProperty ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> .
+
+
+###  http://purl.org/dc/terms/audience
+<http://purl.org/dc/terms/audience> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/available
+<http://purl.org/dc/terms/available> rdf:type owl:AnnotationProperty ;
+                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/bibliographicCitation
+<http://purl.org/dc/terms/bibliographicCitation> rdf:type owl:AnnotationProperty ;
+                                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> .
+
+
+###  http://purl.org/dc/terms/conformsTo
+<http://purl.org/dc/terms/conformsTo> rdf:type owl:AnnotationProperty ;
+                                      rdfs:comment "An established standard to which the described resource conforms."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Conforms To"@en ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                         <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/contributor
+<http://purl.org/dc/terms/contributor> rdf:type owl:AnnotationProperty ;
+                                       <http://purl.org/dc/terms/description> "The guidelines for using names of persons or organizations as creators apply to contributors."@en ;
+                                       rdfs:comment "An entity responsible for making contributions to the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Contributor"@en ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/contributor> .
+
+
+###  http://purl.org/dc/terms/coverage
+<http://purl.org/dc/terms/coverage> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Period> ;
+                                    <http://purl.org/dc/terms/description> "Spatial topic and spatial applicability may be a named place or a location specified by its geographic coordinates. Temporal topic may be a named period, date, or date range. A jurisdiction may be a named administrative entity or a geographic place to which the resource applies. Recommended practice is to use a controlled vocabulary such as the Getty Thesaurus of Geographic Names [[TGN](https://www.getty.edu/research/tools/vocabulary/tgn/index.html)]. Where appropriate, named places or time periods may be used in preference to numeric identifiers such as sets of coordinates or date ranges.  Because coverage is so broadly defined, it is preferable to use the more specific subproperties Temporal Coverage and Spatial Coverage."@en ;
+                                    rdfs:comment "The spatial or temporal topic of the resource, spatial applicability of the resource, or jurisdiction under which the resource is relevant."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Coverage"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> .
+
+
+###  http://purl.org/dc/terms/created
+<http://purl.org/dc/terms/created> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/creator
+<http://purl.org/dc/terms/creator> rdf:type owl:AnnotationProperty ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/creator> ,
+                                                      <http://purl.org/dc/terms/contributor> .
+
+
+###  http://purl.org/dc/terms/date
+<http://purl.org/dc/terms/date> rdf:type owl:AnnotationProperty ;
+                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/dateAccepted
+<http://purl.org/dc/terms/dateAccepted> rdf:type owl:AnnotationProperty ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/dateCopyrighted
+<http://purl.org/dc/terms/dateCopyrighted> rdf:type owl:AnnotationProperty ;
+                                           rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/dateSubmitted
+<http://purl.org/dc/terms/dateSubmitted> rdf:type owl:AnnotationProperty ;
+                                         rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/description
+<http://purl.org/dc/terms/description> rdf:type owl:AnnotationProperty ;
+                                       <http://purl.org/dc/terms/description> "Description may include but is not limited to: an abstract, a table of contents, a graphical representation, or a free-text account of the resource."@en ;
+                                       rdfs:comment "An account of the resource."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Description"@en ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> .
+
+
+###  http://purl.org/dc/terms/educationLevel
+<http://purl.org/dc/terms/educationLevel> rdf:type owl:AnnotationProperty ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+
+
+###  http://purl.org/dc/terms/extent
+<http://purl.org/dc/terms/extent> rdf:type owl:AnnotationProperty ;
+                                  <http://purl.org/dc/terms/description> "Recommended practice is to specify the file size in megabytes and duration in ISO 8601 format."@en ;
+                                  rdfs:comment "The size or duration of the resource."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Extent"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/format> ,
+                                                     <http://purl.org/dc/terms/format> .
+
+
+###  http://purl.org/dc/terms/format
+<http://purl.org/dc/terms/format> rdf:type owl:AnnotationProperty ;
+                                  <http://purl.org/dc/dcam/rangeIncludes> <http://purl.org/dc/terms/Extent> ;
+                                  <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary where available. For example, for file formats one could use the list of Internet Media Types [[MIME](https://www.iana.org/assignments/media-types/media-types.xhtml)].  Examples of dimensions include size and duration."@en ;
+                                  rdfs:comment "The file format, physical medium, or dimensions of the resource."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Format"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/format> .
+
+
+###  http://purl.org/dc/terms/hasFormat
+<http://purl.org/dc/terms/hasFormat> rdf:type owl:AnnotationProperty ;
+                                     <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Is Format Of."@en ;
+                                     rdfs:comment "A related resource that is substantially the same as the pre-existing described resource, but in another format."@en ;
+                                     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                     rdfs:label "Has Format"@en ;
+                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                        <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/hasPart
+<http://purl.org/dc/terms/hasPart> rdf:type owl:AnnotationProperty ;
+                                   <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Is Part Of."@en ;
+                                   rdfs:comment "A related resource that is included either physically or logically in the described resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Has Part"@en ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                      <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/hasVersion
+<http://purl.org/dc/terms/hasVersion> rdf:type owl:AnnotationProperty ;
+                                      <http://purl.org/dc/terms/description> "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Is Version Of."@en ;
+                                      rdfs:comment "A related resource that is a version, edition, or adaptation of the described resource."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Has Version"@en ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                         <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/identifier
+<http://purl.org/dc/terms/identifier> rdf:type owl:AnnotationProperty ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/identifier> .
+
+
+###  http://purl.org/dc/terms/isFormatOf
+<http://purl.org/dc/terms/isFormatOf> rdf:type owl:AnnotationProperty ;
+                                      <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Has Format."@en ;
+                                      rdfs:comment "A pre-existing related resource that is substantially the same as the described resource, but in another format."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Is Format Of"@en ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                         <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isPartOf
+<http://purl.org/dc/terms/isPartOf> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Has Part."@en ;
+                                    rdfs:comment "A related resource in which the described resource is physically or logically included."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Is Part Of"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                       <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isReferencedBy
+<http://purl.org/dc/terms/isReferencedBy> rdf:type owl:AnnotationProperty ;
+                                          <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of References."@en ;
+                                          rdfs:comment "A related resource that references, cites, or otherwise points to the described resource."@en ;
+                                          rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                          rdfs:label "Is Referenced By"@en ;
+                                          rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                             <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isReplacedBy
+<http://purl.org/dc/terms/isReplacedBy> rdf:type owl:AnnotationProperty ;
+                                        <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Replaces."@en ;
+                                        rdfs:comment "A related resource that supplants, displaces, or supersedes the described resource."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                        rdfs:label "Is Replaced By"@en ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                           <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isRequiredBy
+<http://purl.org/dc/terms/isRequiredBy> rdf:type owl:AnnotationProperty ;
+                                        <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Requires."@en ;
+                                        rdfs:comment "A related resource that requires the described resource to support its function, delivery, or coherence."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                        rdfs:label "Is Required By"@en ;
+                                        rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                           <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/isVersionOf
+<http://purl.org/dc/terms/isVersionOf> rdf:type owl:AnnotationProperty ;
+                                       <http://purl.org/dc/terms/description> "Changes in version imply substantive changes in content rather than differences in format. This property is intended to be used with non-literal values. This property is an inverse property of Has Version."@en ;
+                                       rdfs:comment "A related resource of which the described resource is a version, edition, or adaptation."@en ;
+                                       rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                       rdfs:label "Is Version Of"@en ;
+                                       rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                          <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/issued
+<http://purl.org/dc/terms/issued> rdf:type owl:AnnotationProperty ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/language
+<http://purl.org/dc/terms/language> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/terms/description> "Recommended practice is to use either a non-literal value representing a language from a controlled vocabulary such as ISO 639-2 or ISO 639-3, or a literal value consisting of an IETF Best Current Practice 47 [[IETF-BCP47](https://tools.ietf.org/html/bcp47)] language tag."@en ;
+                                    rdfs:comment "A language of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Language"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/language> .
+
+
+###  http://purl.org/dc/terms/license
+<http://purl.org/dc/terms/license> rdf:type owl:AnnotationProperty ;
+                                   <http://purl.org/dc/terms/description> "Recommended practice is to identify the license document with a URI. If this is not possible or feasible, a literal value that identifies the license may be provided."@en ;
+                                   rdfs:comment "A legal document giving official permission to do something with the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "License"@en ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> ,
+                                                      <http://purl.org/dc/terms/rights> .
+
+
+###  http://purl.org/dc/terms/mediator
+<http://purl.org/dc/terms/mediator> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/terms/description> "In an educational context, a mediator might be a parent, teacher, teaching assistant, or care-giver."@en ;
+                                    rdfs:comment "An entity that mediates access to the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Mediator"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/terms/audience> .
+
+
+###  http://purl.org/dc/terms/medium
+<http://purl.org/dc/terms/medium> rdf:type owl:AnnotationProperty ;
+                                  rdfs:comment "The material or physical carrier of the resource."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Medium"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/format> ,
+                                                     <http://purl.org/dc/terms/format> .
+
+
+###  http://purl.org/dc/terms/modified
+<http://purl.org/dc/terms/modified> rdf:type owl:AnnotationProperty ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://purl.org/dc/terms/publisher
+<http://purl.org/dc/terms/publisher> rdf:type owl:AnnotationProperty ;
+                                     rdfs:comment "An entity responsible for making the resource available."@en ;
+                                     rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                     rdfs:label "Publisher"@en ;
+                                     rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/publisher> .
+
+
+###  http://purl.org/dc/terms/references
+<http://purl.org/dc/terms/references> rdf:type owl:AnnotationProperty ;
+                                      <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Is Referenced By."@en ;
+                                      rdfs:comment "A related resource that is referenced, cited, or otherwise pointed to by the described resource."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "References"@en ;
+                                      rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                         <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/relation
+<http://purl.org/dc/terms/relation> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/terms/description> "Recommended practice is to identify the related resource by means of a URI.  If this is not possible or feasible, a string conforming to a formal identification system may be provided."@en ;
+                                    rdfs:comment "A related resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Relation"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> .
+
+
+###  http://purl.org/dc/terms/replaces
+<http://purl.org/dc/terms/replaces> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Is Replaced By."@en ;
+                                    rdfs:comment "A related resource that is supplanted, displaced, or superseded by the described resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Replaces"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                       <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/requires
+<http://purl.org/dc/terms/requires> rdf:type owl:AnnotationProperty ;
+                                    <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. This property is an inverse property of Is Required By."@en ;
+                                    rdfs:comment "A related resource that is required by the described resource to support its function, delivery, or coherence."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Requires"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/relation> ,
+                                                       <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/rights
+<http://purl.org/dc/terms/rights> rdf:type owl:AnnotationProperty ;
+                                  <http://purl.org/dc/terms/description> "Typically, rights information includes a statement about various property rights associated with the resource, including intellectual property rights.  Recommended practice is to refer to a rights statement with a URI.  If this is not possible or feasible, a literal value (name, label, or short text) may be provided."@en ;
+                                  rdfs:comment "Information about rights held in and over the resource."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Rights"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/rights> .
+
+
+###  http://purl.org/dc/terms/source
+<http://purl.org/dc/terms/source> rdf:type owl:AnnotationProperty ;
+                                  <http://purl.org/dc/terms/description> "This property is intended to be used with non-literal values. The described resource may be derived from the related resource in whole or in part. Best practice is to identify the related resource by means of a URI or a string conforming to a formal identification system."@en ;
+                                  rdfs:comment "A related resource from which the described resource is derived."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "Source"@en ;
+                                  rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/source> ,
+                                                     <http://purl.org/dc/terms/relation> .
+
+
+###  http://purl.org/dc/terms/spatial
+<http://purl.org/dc/terms/spatial> rdf:type owl:AnnotationProperty ;
+                                   rdfs:comment "Spatial characteristics of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Spatial Coverage"@en ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ,
+                                                      <http://purl.org/dc/terms/coverage> .
+
+
+###  http://purl.org/dc/terms/subject
+<http://purl.org/dc/terms/subject> rdf:type owl:AnnotationProperty ;
+                                   <http://purl.org/dc/terms/description> "Recommended practice is to refer to the subject with a URI. If this is not possible or feasible, a literal value that identifies the subject may be provided. Both should preferably refer to a subject in a controlled vocabulary."@en ;
+                                   rdfs:comment "A topic of the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Subject"@en ;
+                                   rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/subject> .
+
+
+###  http://purl.org/dc/terms/tableOfContents
+<http://purl.org/dc/terms/tableOfContents> rdf:type owl:AnnotationProperty ;
+                                           rdfs:comment "A list of subunits of the resource."@en ;
+                                           rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                           rdfs:label "Table Of Contents"@en ;
+                                           rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/description> ,
+                                                              <http://purl.org/dc/terms/description> .
+
+
+###  http://purl.org/dc/terms/temporal
+<http://purl.org/dc/terms/temporal> rdf:type owl:AnnotationProperty ;
+                                    rdfs:comment "Temporal characteristics of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "Temporal Coverage"@en ;
+                                    rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/coverage> ,
+                                                       <http://purl.org/dc/terms/coverage> .
+
+
+###  http://purl.org/dc/terms/title
+<http://purl.org/dc/terms/title> rdf:type owl:AnnotationProperty ;
+                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/title> .
+
+
+###  http://purl.org/dc/terms/type
+<http://purl.org/dc/terms/type> rdf:type owl:AnnotationProperty ;
+                                <http://purl.org/dc/terms/description> "Recommended practice is to use a controlled vocabulary such as the DCMI Type Vocabulary [[DCMI-TYPE](http://dublincore.org/documents/dcmi-type-vocabulary/)]. To describe the file format, physical medium, or dimensions of the resource, use the property Format."@en ;
+                                rdfs:comment "The nature or genre of the resource."@en ;
+                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                rdfs:label "Type"@en ;
+                                rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/type> .
+
+
+###  http://purl.org/dc/terms/valid
+<http://purl.org/dc/terms/valid> rdf:type owl:AnnotationProperty ;
+                                 rdfs:subPropertyOf <http://purl.org/dc/elements/1.1/date> .
+
+
+###  http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://swrl.stcommentanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled
+<http://swrl.stcommentanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2002/07/owl#sameAs
+owl:sameAs rdf:type owl:AnnotationProperty .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://purl.org/dc/terms/Box
+<http://purl.org/dc/terms/Box> rdf:type rdfs:Datatype ;
+                               rdfs:comment "The set of regions in space defined by their geographic coordinates according to the DCMI Box Encoding Scheme."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "DCMI Box"@en ;
+                               rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-box/> .
+
+
+###  http://purl.org/dc/terms/ISO3166
+<http://purl.org/dc/terms/ISO3166> rdf:type rdfs:Datatype ;
+                                   rdfs:comment "The set of codes listed in ISO 3166-1 for the representation of names of countries."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "ISO 3166"@en ;
+                                   rdfs:seeAlso <https://www.iso.org/obp/ui/#search> .
+
+
+###  http://purl.org/dc/terms/ISO639-2
+<http://purl.org/dc/terms/ISO639-2> rdf:type rdfs:Datatype ;
+                                    rdfs:comment "The three-letter alphabetic codes listed in ISO639-2 for the representation of names of languages."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "ISO 639-2"@en ;
+                                    rdfs:seeAlso <http://lcweb.loc.gov/standards/iso639-2/langhome.html> .
+
+
+###  http://purl.org/dc/terms/ISO639-3
+<http://purl.org/dc/terms/ISO639-3> rdf:type rdfs:Datatype ;
+                                    rdfs:comment "The set of three-letter codes listed in ISO 639-3 for the representation of names of languages."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "ISO 639-3"@en ;
+                                    rdfs:seeAlso <http://www.sil.org/iso639-3/> .
+
+
+###  http://purl.org/dc/terms/Period
+<http://purl.org/dc/terms/Period> rdf:type rdfs:Datatype ;
+                                  rdfs:comment "The set of time intervals defined by their limits according to the DCMI Period Encoding Scheme."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "DCMI Period"@en ;
+                                  rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-period/> .
+
+
+###  http://purl.org/dc/terms/Point
+<http://purl.org/dc/terms/Point> rdf:type rdfs:Datatype ;
+                                 rdfs:comment "The set of points in space defined by their geographic coordinates according to the DCMI Point Encoding Scheme."@en ;
+                                 rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                 rdfs:label "DCMI Point"@en ;
+                                 rdfs:seeAlso <https://www.dublincore.org/specifications/dublin-core/dcmi-point/> .
+
+
+###  http://purl.org/dc/terms/RFC1766
+<http://purl.org/dc/terms/RFC1766> rdf:type rdfs:Datatype ;
+                                   rdfs:comment "The set of tags, constructed according to RFC 1766, for the identification of languages."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "RFC 1766"@en ;
+                                   rdfs:seeAlso <http://www.ietf.org/rfc/rfc1766.txt> .
+
+
+###  http://purl.org/dc/terms/RFC3066
+<http://purl.org/dc/terms/RFC3066> rdf:type rdfs:Datatype ;
+                                   <http://purl.org/dc/terms/description> "RFC 3066 has been obsoleted by RFC 4646."@en ;
+                                   rdfs:comment "The set of tags constructed according to RFC 3066 for the identification of languages."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "RFC 3066"@en ;
+                                   rdfs:seeAlso <http://www.ietf.org/rfc/rfc3066.txt> .
+
+
+###  http://purl.org/dc/terms/RFC4646
+<http://purl.org/dc/terms/RFC4646> rdf:type rdfs:Datatype ;
+                                   <http://purl.org/dc/terms/description> "RFC 4646 obsoletes RFC 3066."@en ;
+                                   rdfs:comment "The set of tags constructed according to RFC 4646 for the identification of languages."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "RFC 4646"@en ;
+                                   rdfs:seeAlso <http://www.ietf.org/rfc/rfc4646.txt> .
+
+
+###  http://purl.org/dc/terms/RFC5646
+<http://purl.org/dc/terms/RFC5646> rdf:type rdfs:Datatype ;
+                                   <http://purl.org/dc/terms/description> "RFC 5646 obsoletes RFC 4646."@en ;
+                                   rdfs:comment "The set of tags constructed according to RFC 5646 for the identification of languages."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "RFC 5646"@en ;
+                                   rdfs:seeAlso <http://www.ietf.org/rfc/rfc5646.txt> .
+
+
+###  http://purl.org/dc/terms/URI
+<http://purl.org/dc/terms/URI> rdf:type rdfs:Datatype ;
+                               rdfs:comment "The set of identifiers constructed according to the generic syntax for Uniform Resource Identifiers as specified by the Internet Engineering Task Force."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "URI"@en ;
+                               rdfs:seeAlso <http://www.ietf.org/rfc/rfc3986.txt> .
+
+
+###  http://purl.org/dc/terms/W3CDTF
+<http://purl.org/dc/terms/W3CDTF> rdf:type rdfs:Datatype ;
+                                  rdfs:comment "The set of dates and times constructed according to the W3C Date and Time Formats Specification."@en ;
+                                  rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                  rdfs:label "W3C-DTF"@en ;
+                                  rdfs:seeAlso <http://www.w3.org/TR/NOTE-datetime> .
+
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
+
+
+#################################################################
+#    Object Properties
+#################################################################
+
+###  http://example.org/ontology#hasTransport
+:hasTransport rdf:type owl:ObjectProperty ;
+              rdfs:domain :City ;
+              rdfs:range :Transport ;
+              rdfs:comment "Has transport"@en ;
+              rdfs:label "hasTransport"@en .
+
+
+###  http://example.org/ontology#locatedIn
+:locatedIn rdf:type owl:ObjectProperty ;
+           owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#hasLocation> ;
+           rdfs:domain owl:Thing ;
+           rdfs:range :City ;
+           rdfs:comment "Relates an entity to the city where it is geographically situated"@en ;
+           rdfs:label "locatedIn"@en .
+
+
+###  http://example.org/ontology#organizesEvent
+:organizesEvent rdf:type owl:ObjectProperty ;
+                owl:inverseOf <http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> ;
+                rdfs:domain :City ;
+                rdfs:range :Event ;
+                rdfs:comment "Indicates that a city is responsible for organizing a given event."@en ;
+                rdfs:label "organizesEvent"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#hasLocation
+<http://www.co-ode.org/ontologies/ont.owl#hasLocation> rdf:type owl:ObjectProperty ;
+                                                       rdfs:domain :City ;
+                                                       rdfs:range owl:Thing ;
+                                                       rdfs:comment "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."@en ;
+                                                       rdfs:label "hasLocation"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy
+<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> rdf:type owl:ObjectProperty ;
+                                                         rdfs:subPropertyOf owl:topObjectProperty ;
+                                                         rdfs:domain :Event ;
+                                                         rdfs:range :City ;
+                                                         rdfs:comment "Indicates the city or organization responsible for organizing a given event."@en ;
+                                                         rdfs:label "isOrgenizedBy" .
+
+
+#################################################################
+#    Data properties
+#################################################################
+
+###  http://example.org/ontology#assessment
+:assessment rdf:type owl:DatatypeProperty ;
+            rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ;
+            rdfs:range xsd:double ;
+            rdfs:comment "A rating or evaluation score for the item (often based on user reviews or quality)."@en ;
+            rdfs:label "assessment"@en .
+
+
+###  http://example.org/ontology#averageCost
+:averageCost rdf:type owl:DatatypeProperty ;
+             rdfs:domain :Transport ;
+             rdfs:range xsd:double ;
+             rdfs:comment "The average cost associated with the item or service."@en ;
+             rdfs:label "averageCost"@en .
+
+
+###  http://example.org/ontology#averagePrice
+:averagePrice rdf:type owl:DatatypeProperty ;
+              rdfs:domain :Restaurant ;
+              rdfs:range xsd:integer ;
+              rdfs:comment "The average price associated with the item (for example, a typical selling price)."@en ;
+              rdfs:label "averagePrice"@en .
+
+
+###  http://example.org/ontology#company
+:company rdf:type owl:DatatypeProperty ;
+         rdfs:domain :Transport ;
+         rdfs:range xsd:string ;
+         rdfs:comment "The company or organization associated with the item (e.g., its provider or organizer)."@en ;
+         rdfs:label "company"@en .
+
+
+###  http://example.org/ontology#date
+:date rdf:type owl:DatatypeProperty ;
+      rdfs:domain :Event ;
+      rdfs:range xsd:string ;
+      rdfs:comment "A date associated with the item (e.g., the date on which an event occurs)."@en ;
+      rdfs:label "date" .
+
+
+###  http://example.org/ontology#localization
+:localization rdf:type owl:DatatypeProperty ;
+              rdfs:domain :City ;
+              rdfs:range xsd:string ;
+              rdfs:comment "The geographic location or address of the item."@en ;
+              rdfs:label "localization"@en .
+
+
+###  http://example.org/ontology#name
+:name rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#NamedEntity> ;
+      rdfs:range xsd:string ;
+      rdfs:comment "The name or title of the item."@en ;
+      rdfs:label "name"@en .
+
+
+###  http://example.org/ontology#priceNight
+:priceNight rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Hotel ;
+            rdfs:range xsd:integer ;
+            rdfs:comment "The price per night (for example, a nightly rate for lodging)."@en ;
+            rdfs:label "priceNight"@en .
+
+
+###  http://example.org/ontology#stars
+:stars rdf:type owl:DatatypeProperty ;
+       rdfs:domain :Hotel ;
+       rdfs:range xsd:integer ;
+       rdfs:comment "The star rating of an accommodation (e.g., a 5-star rating)."@en ;
+       rdfs:label "stars"@en .
+
+
+###  http://example.org/ontology#type
+:type rdf:type owl:DatatypeProperty ;
+      rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+      rdfs:range xsd:string ;
+      rdfs:comment "A general type or category of the item."@en ;
+      rdfs:label "type"@en .
+
+
+###  http://example.org/ontology#typeCocina
+:typeCocina rdf:type owl:DatatypeProperty ;
+            rdfs:domain :Restaurant ;
+            rdfs:range xsd:string ;
+            rdfs:comment "The type of cuisine offered (e.g., Italian, Chinese)."@en ;
+            rdfs:label "typeCocina"@en .
+
+
+###  http://example.org/ontology#typeHotel
+:typeHotel rdf:type owl:DatatypeProperty ;
+           rdfs:domain :Hotel ;
+           rdfs:range xsd:string ;
+           rdfs:comment "The type or category of a hotel (e.g., resort, hostel, bed-and-breakfast)."@en ;
+           rdfs:label "typeHotel"@en .
+
+
+#################################################################
+#    Classes
+#################################################################
+
+###  http://example.org/ontology#AirTransport
+:AirTransport rdf:type owl:Class ;
+              rdfs:subClassOf :Transport ;
+              rdfs:comment "A mode of transportation via aircraft, such as planes or helicopters."@en ;
+              rdfs:label "AirTransport"@en .
+
+
+###  http://example.org/ontology#Attraction
+:Attraction rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+            rdfs:comment "A place or feature that attracts tourists or visitors"@en ;
+            rdfs:label "Attraction"@en .
+
+
+###  http://example.org/ontology#BusTransport
+:BusTransport rdf:type owl:Class ;
+              rdfs:subClassOf :Transport ;
+              rdfs:comment "Public or private transportation via buses."@en ;
+              rdfs:label "BusTransport"@en .
+
+
+###  http://example.org/ontology#CapitalCity
+:CapitalCity rdf:type owl:Class ;
+             rdfs:subClassOf :City ;
+             rdfs:comment "A city that serves as the capital of a country or region."@en ;
+             rdfs:label "CapitalCity"@en .
+
+
+###  http://example.org/ontology#City
+:City rdf:type owl:Class ;
+      rdfs:comment "An urban area that can host events, services, and attractions."@en ;
+      rdfs:label "City"@en ;
+      rdfs:seeAlso <http://dbpedia.org/resource/City> .
+
+
+###  http://example.org/ontology#CityWithEvents
+:CityWithEvents rdf:type owl:Class ;
+                owl:equivalentClass [ owl:intersectionOf ( :City
+                                                           [ rdf:type owl:Restriction ;
+                                                             owl:onProperty :organizesEvent ;
+                                                             owl:someValuesFrom :Event
+                                                           ]
+                                                         ) ;
+                                      rdf:type owl:Class
+                                    ] ;
+                rdfs:subClassOf :City ;
+                rdfs:comment "A city that organizes at least one event."@en ;
+                rdfs:label "CityWithEvents"@en .
+
+
+###  http://example.org/ontology#CityWithTransport
+:CityWithTransport rdf:type owl:Class ;
+                   owl:equivalentClass [ rdf:type owl:Restriction ;
+                                         owl:onProperty :hasTransport ;
+                                         owl:minQualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                                         owl:onClass :Transport
+                                       ] ;
+                   rdfs:subClassOf :City ;
+                   rdfs:comment "CityWithTransport"@en ,
+                                "Citys with 1 o more transports"@en .
+
+
+###  http://example.org/ontology#CulturalEvent
+:CulturalEvent rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "An event related to cultural expression, tradition, or art."@en ;
+               rdfs:label "CulturalEvent"@en .
+
+
+###  http://example.org/ontology#Event
+:Event rdf:type owl:Class ;
+       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ,
+                       <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+       rdfs:comment "A scheduled occasion such as a concert, festival, or sports competition."@en ;
+       rdfs:label "Event" .
+
+
+###  http://example.org/ontology#FastFoodRestaurant
+:FastFoodRestaurant rdf:type owl:Class ;
+                    rdfs:subClassOf :Restaurant ;
+                    rdfs:comment "A restaurant that serves quick and inexpensive meals."@en ;
+                    rdfs:label "FastFoodRestaurant"@en .
+
+
+###  http://example.org/ontology#GourmetRestaurant
+:GourmetRestaurant rdf:type owl:Class ;
+                   rdfs:subClassOf :Restaurant ;
+                   rdfs:comment "A high-quality restaurant offering refined cuisine."@en ;
+                   rdfs:label "GourmetRestaurant"@en .
+
+
+###  http://example.org/ontology#HighRatedHotel
+:HighRatedHotel rdf:type owl:Class ;
+                rdfs:subClassOf :Hotel ;
+                rdfs:comment "A hotel with a high evaluation based on user feedback or rating metrics."@en ;
+                rdfs:label "HighRatedHotel"@en .
+
+
+###  http://example.org/ontology#HighRatedRestaurant
+:HighRatedRestaurant rdf:type owl:Class ;
+                     rdfs:subClassOf :Restaurant ;
+                     rdfs:comment "A restaurant with a high user rating or recognized quality."@en ;
+                     rdfs:label "HighRatedRestaurant"@en .
+
+
+###  http://example.org/ontology#HistoricalSite
+:HistoricalSite rdf:type owl:Class ;
+                rdfs:subClassOf :Attraction ;
+                rdfs:comment "A place of historical significance, such as a monument or landmark." ;
+                rdfs:label "HistoricalSite"@en .
+
+
+###  http://example.org/ontology#Hotel
+:Hotel rdf:type owl:Class ;
+       owl:equivalentClass [ rdf:type owl:Restriction ;
+                             owl:onProperty :name ;
+                             owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
+                             owl:onDataRange xsd:string
+                           ] ;
+       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ;
+       rdfs:comment "A commercial establishment offering lodging and other services to travelers."@en ;
+       rdfs:label "Hotel"@en ;
+       rdfs:seeAlso <http://dbpedia.org/resource/Hotel> .
+
+
+###  http://example.org/ontology#LuxuryHotel
+:LuxuryHotel rdf:type owl:Class ;
+             rdfs:subClassOf :Hotel ;
+             rdfs:comment "A high-end hotel offering premium services and accommodations."@en ;
+             rdfs:label "LuxuryHotel"@en .
+
+
+###  http://example.org/ontology#Museum
+:Museum rdf:type owl:Class ;
+        rdfs:subClassOf :Attraction ;
+        rdfs:comment "A building or institution that houses and displays artifacts and exhibitions." ;
+        rdfs:label "Museum" .
+
+
+###  http://example.org/ontology#MusicFestival
+:MusicFestival rdf:type owl:Class ;
+               rdfs:subClassOf :Event ;
+               rdfs:comment "A multi-performance event dedicated to musical entertainment." ;
+               rdfs:label "MusicFestival"@en .
+
+
+###  http://example.org/ontology#NaturalAttraction
+:NaturalAttraction rdf:type owl:Class ;
+                   rdfs:subClassOf :Attraction ;
+                   rdfs:comment "A natural site or feature of interest to visitors, such as mountains or parks."@en ;
+                   rdfs:label "NaturalAttraction"@en .
+
+
+###  http://example.org/ontology#RailTransport
+:RailTransport rdf:type owl:Class ;
+               rdfs:subClassOf :Transport ;
+               rdfs:comment "A form of transportation using trains or railways."@en ;
+               rdfs:label "RailTransport"@en .
+
+
+###  http://example.org/ontology#Restaurant
+:Restaurant rdf:type owl:Class ;
+            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ;
+            rdfs:comment "A place where meals are prepared and served to customers."@en ;
+            rdfs:label "Restaurant"@en .
+
+
+###  http://example.org/ontology#SportsEvent
+:SportsEvent rdf:type owl:Class ;
+             rdfs:subClassOf :Event ;
+             rdfs:comment "A competitive or recreational sporting event."@en ;
+             rdfs:label "SportsEvent"@en .
+
+
+###  http://example.org/ontology#Transport
+:Transport rdf:type owl:Class ;
+           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+           rdfs:comment "A category encompassing means of travel or transit."@en ;
+           rdfs:label "Transport"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#BudgetHotel
+<http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> rdf:type owl:Class ;
+                                                       rdfs:subClassOf :CityWithEvents ;
+                                                       rdfs:comment "A hotel that offers 5-star service at a price lower than 100€ per night." ;
+                                                       rdfs:label "BudgetHotel"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#HotelInCity
+<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> rdf:type owl:Class ;
+                                                       owl:equivalentClass [ owl:intersectionOf ( :Hotel
+                                                                                                  [ rdf:type owl:Restriction ;
+                                                                                                    owl:onProperty :locatedIn ;
+                                                                                                    owl:someValuesFrom :City
+                                                                                                  ]
+                                                                                                ) ;
+                                                                             rdf:type owl:Class
+                                                                           ] ;
+                                                       rdfs:subClassOf :Hotel ;
+                                                       rdfs:comment "A hotel located within an urban area."@en ;
+                                                       rdfs:label "HotelInCity"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#NamedEntity
+<http://www.co-ode.org/ontologies/ont.owl#NamedEntity> rdf:type owl:Class ;
+                                                       rdfs:comment "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."@en ;
+                                                       rdfs:label "NamedEntity"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#RatedEntity
+<http://www.co-ode.org/ontologies/ont.owl#RatedEntity> rdf:type owl:Class ;
+                                                       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#NamedEntity> ;
+                                                       rdfs:comment "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."@en ;
+                                                       rdfs:label "RatedEntity"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel
+<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> rdf:type owl:Class ;
+                                                            rdfs:subClassOf :Hotel ;
+                                                            rdfs:comment "Recommended Hotel"@en ;
+                                                            rdfs:label "RecommendedHotel"@en .
+
+
+###  http://www.co-ode.org/ontologies/ont.owl#TypedEntity
+<http://www.co-ode.org/ontologies/ont.owl#TypedEntity> rdf:type owl:Class ;
+                                                       rdfs:comment "An entity that is classified by type, such as restaurants or attractions."@en ;
+                                                       rdfs:label "TypedEntity"@en .
+
+
+#################################################################
+#    Individuals
+#################################################################
+
+###  http://example.org/ontology#Barcelona
+:Barcelona rdf:type owl:NamedIndividual ,
+                    :City ;
+           :organizesEvent :CongresoBarcelona ;
+           :localization "41.3874,2.1686" ;
+           owl:sameAs "http://dbpedia.org/resource/Barcelona"@en .
+
+
+###  http://example.org/ontology#Bilbao
+:Bilbao rdf:type owl:NamedIndividual ,
+                 :City ;
+        :organizesEvent :CarnavalBilbao ;
+        :localization "43.2630,-2.9350" .
+
+
+###  http://example.org/ontology#CarnavalBarcelona
+:CarnavalBarcelona rdf:type owl:NamedIndividual ,
+                            :Event ;
+                   :locatedIn :Barcelona ;
+                   :date "2024-03-16" ;
+                   :type "Gastronómico" .
+
+
+###  http://example.org/ontology#CarnavalBilbao
+:CarnavalBilbao rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Bilbao ;
+                :date "2024-10-13" ,
+                      "2024-11-12" ,
+                      "2024-12-20" ;
+                :type "Música" ,
+                      "Tecnológico" .
+
+
+###  http://example.org/ontology#CarnavalCádiz
+:CarnavalCádiz rdf:type owl:NamedIndividual ,
+                        :Event ;
+               :locatedIn :Cádiz ;
+               :date "2024-04-19" ,
+                     "2024-10-07" ,
+                     "2024-12-11" ;
+               :type "Deportivo" ,
+                     "Gastronómico" .
+
+
+###  http://example.org/ontology#CarnavalMadrid
+:CarnavalMadrid rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Madrid ;
+                :date "2024-09-27" ;
+                :type "Deportivo" .
+
+
+###  http://example.org/ontology#CarnavalMálaga
+:CarnavalMálaga rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Málaga ;
+                :date "2024-01-15" ,
+                      "2024-04-13" ,
+                      "2024-12-24" ;
+                :type "Cultural" ,
+                      "Música" ,
+                      "Tecnológico" .
+
+
+###  http://example.org/ontology#CarnavalSanSebastián
+:CarnavalSanSebastián rdf:type owl:NamedIndividual ,
+                               :Event ;
+                      :locatedIn :SanSebastián ;
+                      :date "2024-02-04" ;
+                      :type "Cultural" .
+
+
+###  http://example.org/ontology#CarnavalSevilla
+:CarnavalSevilla rdf:type owl:NamedIndividual ,
+                          :Event ;
+                 :locatedIn :Sevilla ;
+                 :date "2024-02-02" ,
+                       "2024-02-04" ,
+                       "2024-03-09" ,
+                       "2024-05-08" ;
+                 :type "Cultural" ,
+                       "Música" ,
+                       "Tecnológico" .
+
+
+###  http://example.org/ontology#CarnavalToledo
+:CarnavalToledo rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Toledo ;
+                :date "2024-12-16" ;
+                :type "Gastronómico" .
+
+
+###  http://example.org/ontology#CarnavalValencia
+:CarnavalValencia rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Valencia ;
+                  :date "2024-01-28" ;
+                  :type "Música" .
+
+
+###  http://example.org/ontology#CarnavalZaragoza
+:CarnavalZaragoza rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Zaragoza ;
+                  :date "2024-02-19" ;
+                  :type "Gastronómico" .
+
+
+###  http://example.org/ontology#CastilloBarcelona
+:CastilloBarcelona rdf:type owl:NamedIndividual ,
+                            :Attraction ;
+                   :locatedIn :Barcelona ;
+                   :assessment "4.5"^^xsd:double ;
+                   :type "Cultural" .
+
+
+###  http://example.org/ontology#CastilloBilbao
+:CastilloBilbao rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Bilbao ;
+                :assessment "4.4"^^xsd:double ;
+                :type "Playa" .
+
+
+###  http://example.org/ontology#CastilloCádiz
+:CastilloCádiz rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Cádiz ;
+               :assessment "3.5"^^xsd:double ,
+                           "4.0"^^xsd:double ;
+               :type "Monumento" ,
+                     "Playa" .
+
+
+###  http://example.org/ontology#CastilloMadrid
+:CastilloMadrid rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Madrid ;
+                :assessment "4.0"^^xsd:double ;
+                :type "Monumento" ,
+                      "Museo" .
+
+
+###  http://example.org/ontology#CastilloMálaga
+:CastilloMálaga rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Málaga ;
+                :assessment "4.3"^^xsd:double ,
+                            "4.4"^^xsd:double ;
+                :type "Cultural" ,
+                      "Playa" .
+
+
+###  http://example.org/ontology#CastilloPamplona
+:CastilloPamplona rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Pamplona ;
+                  :assessment "3.6"^^xsd:double ,
+                              "3.7"^^xsd:double ,
+                              "3.9"^^xsd:double ,
+                              "4.8"^^xsd:double ;
+                  :type "Monumento" ,
+                        "Museo" ,
+                        "Playa" .
+
+
+###  http://example.org/ontology#CastilloSanSebastián
+:CastilloSanSebastián rdf:type owl:NamedIndividual ,
+                               :Attraction ;
+                      :locatedIn :SanSebastián ;
+                      :assessment "3.8"^^xsd:double ,
+                                  "4.3"^^xsd:double ,
+                                  "4.5"^^xsd:double ,
+                                  "4.8"^^xsd:double ;
+                      :type "Cultural" ,
+                            "Museo" ,
+                            "Parque" .
+
+
+###  http://example.org/ontology#CastilloSevilla
+:CastilloSevilla rdf:type owl:NamedIndividual ,
+                          :Attraction ;
+                 :locatedIn :Sevilla ;
+                 :assessment "4.6"^^xsd:double ;
+                 :type "Monumento" .
+
+
+###  http://example.org/ontology#CastilloToledo
+:CastilloToledo rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Toledo ;
+                :assessment "3.7"^^xsd:double ;
+                :type "Monumento" .
+
+
+###  http://example.org/ontology#CastilloValencia
+:CastilloValencia rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Valencia ;
+                  :assessment "4.7"^^xsd:double ;
+                  :type "Playa" .
+
+
+###  http://example.org/ontology#CastilloZaragoza
+:CastilloZaragoza rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Zaragoza ;
+                  :assessment "3.5"^^xsd:double ,
+                              "3.7"^^xsd:double ,
+                              "4.1"^^xsd:double ,
+                              "5.0"^^xsd:double ;
+                  :type "Museo" ,
+                        "Parque" .
+
+
+###  http://example.org/ontology#CatedralBarcelona
+:CatedralBarcelona rdf:type owl:NamedIndividual ,
+                            :Attraction ;
+                   :locatedIn :Barcelona ;
+                   :assessment "3.7"^^xsd:double ,
+                               "4.3"^^xsd:double ;
+                   :type "Museo" ,
+                         "Playa" .
+
+
+###  http://example.org/ontology#CatedralBilbao
+:CatedralBilbao rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Bilbao ;
+                :assessment "3.7"^^xsd:double ,
+                            "4.9"^^xsd:double ;
+                :type "Cultural" ,
+                      "Parque" .
+
+
+###  http://example.org/ontology#CatedralCádiz
+:CatedralCádiz rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Cádiz ;
+               :assessment "4.4"^^xsd:double ;
+               :type "Parque" .
+
+
+###  http://example.org/ontology#CatedralMadrid
+:CatedralMadrid rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Madrid ;
+                :assessment "4.6"^^xsd:double ;
+                :type "Playa" .
+
+
+###  http://example.org/ontology#CatedralMálaga
+:CatedralMálaga rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Málaga ;
+                :assessment "4.1"^^xsd:double ,
+                            "4.4"^^xsd:double ;
+                :type "Museo" ,
+                      "Parque" .
+
+
+###  http://example.org/ontology#CatedralPamplona
+:CatedralPamplona rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Pamplona ;
+                  :assessment "4.0"^^xsd:double ,
+                              "4.4"^^xsd:double ;
+                  :type "Monumento" ,
+                        "Playa" .
+
+
+###  http://example.org/ontology#CatedralSevilla
+:CatedralSevilla rdf:type owl:NamedIndividual ,
+                          :Attraction ;
+                 :locatedIn :Sevilla ;
+                 :assessment "4.1"^^xsd:double ,
+                             "4.6"^^xsd:double ;
+                 :type "Cultural" ,
+                       "Playa" .
+
+
+###  http://example.org/ontology#CatedralToledo
+:CatedralToledo rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Toledo ;
+                :assessment "3.7"^^xsd:double ,
+                            "4.0"^^xsd:double ,
+                            "4.3"^^xsd:double ,
+                            "4.6"^^xsd:double ;
+                :type "Cultural" ,
+                      "Monumento" ,
+                      "Playa" .
+
+
+###  http://example.org/ontology#CatedralValencia
+:CatedralValencia rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Valencia ;
+                  :assessment "3.6"^^xsd:double ,
+                              "4.0"^^xsd:double ,
+                              "4.3"^^xsd:double ,
+                              "4.6"^^xsd:double ,
+                              "4.8"^^xsd:double ;
+                  :type "Monumento" ,
+                        "Museo" ,
+                        "Parque" .
+
+
+###  http://example.org/ontology#CatedralZaragoza
+:CatedralZaragoza rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Zaragoza ;
+                  :assessment "3.6"^^xsd:double ,
+                              "4.6"^^xsd:double ;
+                  :type "Playa" .
+
+
+###  http://example.org/ontology#ConciertoCádiz
+:ConciertoCádiz rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Cádiz ;
+                :date "2024-05-15" ,
+                      "2024-06-21" ;
+                :type "Gastronómico" ,
+                      "Tecnológico" .
+
+
+###  http://example.org/ontology#ConciertoMálaga
+:ConciertoMálaga rdf:type owl:NamedIndividual ,
+                          :Event ;
+                 :locatedIn :Málaga ;
+                 :date "2024-05-25" ,
+                       "2024-08-12" ;
+                 :type "Música" .
+
+
+###  http://example.org/ontology#ConciertoPamplona
+:ConciertoPamplona rdf:type owl:NamedIndividual ,
+                            :Event ;
+                   :locatedIn :Pamplona ;
+                   :date "2024-07-04" ,
+                         "2024-12-21" ;
+                   :type "Deportivo" ,
+                         "Tecnológico" .
+
+
+###  http://example.org/ontology#ConciertoSanSebastián
+:ConciertoSanSebastián rdf:type owl:NamedIndividual ,
+                                :Event ;
+                       :locatedIn :SanSebastián ;
+                       :date "2024-11-20" ;
+                       :type "Gastronómico" .
+
+
+###  http://example.org/ontology#ConciertoSevilla
+:ConciertoSevilla rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Sevilla ;
+                  :date "2024-02-22" ;
+                  :type "Tecnológico" .
+
+
+###  http://example.org/ontology#ConciertoToledo
+:ConciertoToledo rdf:type owl:NamedIndividual ,
+                          :Event ;
+                 :locatedIn :Toledo ;
+                 :date "2024-02-03" ,
+                       "2024-02-06" ,
+                       "2024-12-06" ;
+                 :type "Gastronómico" ,
+                       "Música" .
+
+
+###  http://example.org/ontology#ConciertoValencia
+:ConciertoValencia rdf:type owl:NamedIndividual ,
+                            :Event ;
+                   :locatedIn :Valencia ;
+                   :date "2024-02-07" ;
+                   :type "Música" .
+
+
+###  http://example.org/ontology#ConciertoZaragoza
+:ConciertoZaragoza rdf:type owl:NamedIndividual ,
+                            :Event ;
+                   :locatedIn :Zaragoza ;
+                   :date "2024-09-11" ;
+                   :type "Cultural" .
+
+
+###  http://example.org/ontology#CongresoBarcelona
+:CongresoBarcelona rdf:type owl:NamedIndividual ,
+                            :Event ;
+                   :locatedIn :Barcelona ;
+                   :date "2024-01-27" ,
+                         "2024-02-21" ,
+                         "2024-06-28" ,
+                         "2024-07-14" ,
+                         "2024-11-17" ;
+                   :type "Cultural" ,
+                         "Deportivo" ,
+                         "Gastronómico" .
+
+
+###  http://example.org/ontology#CongresoBilbao
+:CongresoBilbao rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Bilbao ;
+                :date "2024-08-27" ,
+                      "2024-10-27" ,
+                      "2024-12-01" ;
+                :type "Cultural" ,
+                      "Música" .
+
+
+###  http://example.org/ontology#CongresoCádiz
+:CongresoCádiz rdf:type owl:NamedIndividual ,
+                        :Event ;
+               :locatedIn :Cádiz ;
+               :date "2024-06-02" ,
+                     "2024-06-07" ;
+               :type "Deportivo" ,
+                     "Música" .
+
+
+###  http://example.org/ontology#CongresoSanSebastián
+:CongresoSanSebastián rdf:type owl:NamedIndividual ,
+                               :Event ;
+                      :locatedIn :SanSebastián ;
+                      :date "2024-06-04" ;
+                      :type "Música" .
+
+
+###  http://example.org/ontology#CongresoSevilla
+:CongresoSevilla rdf:type owl:NamedIndividual ,
+                          :Event ;
+                 :locatedIn :Sevilla ;
+                 :date "2024-10-24" ;
+                 :type "Gastronómico" .
+
+
+###  http://example.org/ontology#CongresoToledo
+:CongresoToledo rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Toledo ;
+                :date "2024-01-01" ,
+                      "2024-10-11" ,
+                      "2024-10-27" ,
+                      "2024-12-14" ;
+                :type "Cultural" ,
+                      "Gastronómico" ,
+                      "Música" .
+
+
+###  http://example.org/ontology#CongresoValencia
+:CongresoValencia rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Valencia ;
+                  :date "2024-08-13" ,
+                        "2024-10-24" ,
+                        "2024-12-13" ;
+                  :type "Cultural" ,
+                        "Música" ,
+                        "Tecnológico" .
+
+
+###  http://example.org/ontology#CongresoZaragoza
+:CongresoZaragoza rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Zaragoza ;
+                  :date "2024-07-10" ,
+                        "2024-07-19" ,
+                        "2024-08-24" ,
+                        "2024-09-09" ;
+                  :type "Cultural" ,
+                        "Deportivo" ,
+                        "Gastronómico" .
+
+
+###  http://example.org/ontology#Cádiz
+:Cádiz rdf:type owl:NamedIndividual ,
+                :City ;
+       :localization "36.5297,-6.2920" .
+
+
+###  http://example.org/ontology#FeriaBarcelona
+:FeriaBarcelona rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Barcelona ;
+                :date "2024-01-04" ,
+                      "2024-05-17" ,
+                      "2024-06-28" ,
+                      "2024-09-21" ;
+                :type "Cultural" ,
+                      "Deportivo" ,
+                      "Música" .
+
+
+###  http://example.org/ontology#FeriaCádiz
+:FeriaCádiz rdf:type owl:NamedIndividual ,
+                     :Event ;
+            :locatedIn :Cádiz ;
+            :date "2024-07-01" ;
+            :type "Música" .
+
+
+###  http://example.org/ontology#FeriaMadrid
+:FeriaMadrid rdf:type owl:NamedIndividual ,
+                      :Event ;
+             :locatedIn :Madrid ;
+             :date "2024-10-12" ,
+                   "2024-11-07" ,
+                   "2024-12-18" ;
+             :type "Cultural" ,
+                   "Deportivo" .
+
+
+###  http://example.org/ontology#FeriaMálaga
+:FeriaMálaga rdf:type owl:NamedIndividual ,
+                      :Event ;
+             :locatedIn :Málaga ;
+             :date "2024-05-07" ,
+                   "2024-06-26" ,
+                   "2024-12-22" ;
+             :type "Cultural" ,
+                   "Gastronómico" ,
+                   "Música" .
+
+
+###  http://example.org/ontology#FeriaPamplona
+:FeriaPamplona rdf:type owl:NamedIndividual ,
+                        :Event ;
+               :locatedIn :Pamplona ;
+               :date "2024-05-04" ,
+                     "2024-12-26" ;
+               :type "Deportivo" ,
+                     "Gastronómico" .
+
+
+###  http://example.org/ontology#FeriaSevilla
+:FeriaSevilla rdf:type owl:NamedIndividual ,
+                       :Event ;
+              :locatedIn :Sevilla ;
+              :date "2024-06-15" ,
+                    "2024-07-13" ,
+                    "2024-08-17" ,
+                    "2024-11-09" ;
+              :type "Deportivo" ,
+                    "Gastronómico" ,
+                    "Música" .
+
+
+###  http://example.org/ontology#FeriaToledo
+:FeriaToledo rdf:type owl:NamedIndividual ,
+                      :Event ;
+             :locatedIn :Toledo ;
+             :date "2024-08-26" ,
+                   "2024-12-18" ;
+             :type "Deportivo" ,
+                   "Tecnológico" .
+
+
+###  http://example.org/ontology#FeriaZaragoza
+:FeriaZaragoza rdf:type owl:NamedIndividual ,
+                        :Event ;
+               :locatedIn :Zaragoza ;
+               :date "2024-04-25" ,
+                     "2024-05-26" ;
+               :type "Cultural" ,
+                     "Gastronómico" .
+
+
+###  http://example.org/ontology#FestivalBarcelona
+:FestivalBarcelona rdf:type owl:NamedIndividual ,
+                            :Event ;
+                   :locatedIn :Barcelona ;
+                   :date "2024-03-03" ,
+                         "2024-07-17" ;
+                   :type "Cultural" ,
+                         "Deportivo" .
+
+
+###  http://example.org/ontology#FestivalBilbao
+:FestivalBilbao rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Bilbao ;
+                :date "2024-02-01" ;
+                :type "Deportivo" .
+
+
+###  http://example.org/ontology#FestivalCádiz
+:FestivalCádiz rdf:type owl:NamedIndividual ,
+                        :Event ;
+               :locatedIn :Cádiz ;
+               :date "2024-01-02" ;
+               :type "Cultural" .
+
+
+###  http://example.org/ontology#FestivalMadrid
+:FestivalMadrid rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Madrid ;
+                :date "2024-01-12" ,
+                      "2024-03-17" ,
+                      "2024-06-21" ,
+                      "2024-07-21" ,
+                      "2024-08-24" ,
+                      "2024-09-14" ;
+                :type "Cultural" ,
+                      "Deportivo" ,
+                      "Gastronómico" ,
+                      "Música" .
+
+
+###  http://example.org/ontology#FestivalMálaga
+:FestivalMálaga rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Málaga ;
+                :date "2024-03-11" ;
+                :type "Tecnológico" .
+
+
+###  http://example.org/ontology#FestivalPamplona
+:FestivalPamplona rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Pamplona ;
+                  :date "2024-02-13" ;
+                  :type "Deportivo" .
+
+
+###  http://example.org/ontology#FestivalSanSebastián
+:FestivalSanSebastián rdf:type owl:NamedIndividual ,
+                               :Event ;
+                      :locatedIn :SanSebastián ;
+                      :date "2024-06-02" ;
+                      :type "Cultural" .
+
+
+###  http://example.org/ontology#FestivalSevilla
+:FestivalSevilla rdf:type owl:NamedIndividual ,
+                          :Event ;
+                 :locatedIn :Sevilla ;
+                 :date "2024-08-16" ;
+                 :type "Cultural" .
+
+
+###  http://example.org/ontology#FestivalToledo
+:FestivalToledo rdf:type owl:NamedIndividual ,
+                         :Event ;
+                :locatedIn :Toledo ;
+                :date "2024-02-02" ,
+                      "2024-03-26" ,
+                      "2024-12-19" ;
+                :type "Música" ,
+                      "Tecnológico" .
+
+
+###  http://example.org/ontology#FestivalValencia
+:FestivalValencia rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Valencia ;
+                  :date "2024-01-24" ,
+                        "2024-05-11" ,
+                        "2024-12-01" ,
+                        "2024-12-23" ;
+                  :type "Cultural" ,
+                        "Deportivo" ,
+                        "Gastronómico" ,
+                        "Música" .
+
+
+###  http://example.org/ontology#FestivalZaragoza
+:FestivalZaragoza rdf:type owl:NamedIndividual ,
+                           :Event ;
+                  :locatedIn :Zaragoza ;
+                  :date "2024-02-22" ,
+                        "2024-09-01" ,
+                        "2024-11-06" ;
+                  :type "Gastronómico" ,
+                        "Música" .
+
+
+###  http://example.org/ontology#HotelDelMarBarcelona
+:HotelDelMarBarcelona rdf:type owl:NamedIndividual ,
+                               :Hotel ;
+                      :locatedIn :Barcelona ;
+                      :assessment "4.1"^^xsd:double ,
+                                  "4.6"^^xsd:double ;
+                      :priceNight 250 ,
+                                  298 ;
+                      :stars 4 ,
+                             5 ;
+                      :typeHotel "Playa" ,
+                                 "Turistico" .
+
+
+###  http://example.org/ontology#HotelDelMarCádiz
+:HotelDelMarCádiz rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Cádiz ;
+                  :assessment "4.4"^^xsd:double ;
+                  :priceNight 167 ,
+                              283 ;
+                  :stars 3 ,
+                         5 ;
+                  :typeHotel "Lujo" ,
+                             "Playa" .
+
+
+###  http://example.org/ontology#HotelDelMarMadrid
+:HotelDelMarMadrid rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Madrid ;
+                   :assessment "3.8"^^xsd:double ,
+                               "4.7"^^xsd:double ;
+                   :priceNight 172 ,
+                               177 ;
+                   :stars 3 ,
+                          4 ;
+                   :typeHotel "Lujo" ,
+                              "Turistico" .
+
+
+###  http://example.org/ontology#HotelDelMarMálaga
+:HotelDelMarMálaga rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Málaga ;
+                   :assessment "4.7"^^xsd:double ,
+                               "4.8"^^xsd:double ;
+                   :priceNight 196 ,
+                               65 ;
+                   :stars 3 ,
+                          5 ;
+                   :typeHotel "Playa" ,
+                              "Rural" .
+
+
+###  http://example.org/ontology#HotelDelMarPamplona
+:HotelDelMarPamplona rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Pamplona ;
+                     :assessment "3.6"^^xsd:double ,
+                                 "4.4"^^xsd:double ;
+                     :priceNight 270 ,
+                                 59 ;
+                     :stars 4 ,
+                            5 ;
+                     :typeHotel "Negocios" ,
+                                "Turistico" .
+
+
+###  http://example.org/ontology#HotelDelMarSanSebastián
+:HotelDelMarSanSebastián rdf:type owl:NamedIndividual ,
+                                  :Hotel ;
+                         :locatedIn :SanSebastián ;
+                         :assessment "3.7"^^xsd:double ,
+                                     "3.9"^^xsd:double ,
+                                     "4.1"^^xsd:double ;
+                         :priceNight 110 ,
+                                     270 ,
+                                     65 ;
+                         :stars 3 ,
+                                4 ;
+                         :typeHotel "Lujo" ,
+                                    "Rural" ,
+                                    "Turistico" .
+
+
+###  http://example.org/ontology#HotelDelMarSevilla
+:HotelDelMarSevilla rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Sevilla ;
+                    :assessment "4.2"^^xsd:double ,
+                                "4.4"^^xsd:double ,
+                                "4.9"^^xsd:double ;
+                    :priceNight 121 ,
+                                208 ,
+                                95 ;
+                    :stars 5 ;
+                    :typeHotel "Negocios" ,
+                               "Playa" ,
+                               "Turistico" .
+
+
+###  http://example.org/ontology#HotelDelMarToledo
+:HotelDelMarToledo rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Toledo ;
+                   :assessment "4.3"^^xsd:double ;
+                   :priceNight 145 ;
+                   :stars 5 ;
+                   :typeHotel "Playa" .
+
+
+###  http://example.org/ontology#HotelDelMarValencia
+:HotelDelMarValencia rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Valencia ;
+                     :assessment "3.8"^^xsd:double ,
+                                 "4.7"^^xsd:double ;
+                     :priceNight 139 ,
+                                 283 ;
+                     :stars 3 ,
+                            4 ;
+                     :typeHotel "Negocios" ,
+                                "Rural" .
+
+
+###  http://example.org/ontology#HotelDelMarZaragoza
+:HotelDelMarZaragoza rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Zaragoza ;
+                     :assessment "5.0"^^xsd:double ;
+                     :priceNight 170 ;
+                     :stars 3 ;
+                     :typeHotel "Playa" .
+
+
+###  http://example.org/ontology#HotelPalaceBarcelona
+:HotelPalaceBarcelona rdf:type owl:NamedIndividual ,
+                               :Hotel ;
+                      :locatedIn :Barcelona ;
+                      :assessment "3.8"^^xsd:double ,
+                                  "4.3"^^xsd:double ;
+                      :priceNight 106 ,
+                                  251 ;
+                      :stars 3 ,
+                             4 ;
+                      :typeHotel "Negocios" ,
+                                 "Rural" .
+
+
+###  http://example.org/ontology#HotelPalaceBilbao
+:HotelPalaceBilbao rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Bilbao ;
+                   :assessment "3.7"^^xsd:double ;
+                   :priceNight 286 ;
+                   :stars 5 ;
+                   :typeHotel "Turistico" .
+
+
+###  http://example.org/ontology#HotelPalaceCádiz
+:HotelPalaceCádiz rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Cádiz ;
+                  :assessment "4.4"^^xsd:double ,
+                              "4.8"^^xsd:double ;
+                  :priceNight 251 ,
+                              287 ;
+                  :stars 3 ;
+                  :typeHotel "Negocios" ,
+                             "Rural" .
+
+
+###  http://example.org/ontology#HotelPalaceMadrid
+:HotelPalaceMadrid rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Barcelona ,
+                              :Madrid ;
+                   :assessment "4.1"^^xsd:double ,
+                               "4.2"^^xsd:double ,
+                               "4.3"^^xsd:double ,
+                               "4.5"^^xsd:double ,
+                               "5.0"^^xsd:double ;
+                   :priceNight 227 ,
+                               284 ,
+                               290 ,
+                               65 ,
+                               91 ;
+                   :stars 4 ,
+                          5 ;
+                   :typeHotel "Lujo" ,
+                              "Negocios" ,
+                              "Rural" ,
+                              "Turistico" .
+
+
+###  http://example.org/ontology#HotelPalaceMálaga
+:HotelPalaceMálaga rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Málaga ;
+                   :assessment "4.2"^^xsd:double ,
+                               "4.6"^^xsd:double ,
+                               "4.8"^^xsd:double ;
+                   :priceNight 160 ,
+                               195 ,
+                               198 ;
+                   :stars 3 ;
+                   :typeHotel "Negocios" ,
+                              "Rural" ,
+                              "Turistico" .
+
+
+###  http://example.org/ontology#HotelPalacePamplona
+:HotelPalacePamplona rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Pamplona ;
+                     :assessment "3.9"^^xsd:double ,
+                                 "4.1"^^xsd:double ,
+                                 "4.5"^^xsd:double ;
+                     :priceNight 177 ,
+                                 58 ,
+                                 79 ;
+                     :stars 4 ,
+                            5 ;
+                     :typeHotel "Lujo" ,
+                                "Playa" ,
+                                "Turistico" .
+
+
+###  http://example.org/ontology#HotelPalaceToledo
+:HotelPalaceToledo rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Toledo ;
+                   :assessment "3.8"^^xsd:double ,
+                               "4.2"^^xsd:double ,
+                               "4.7"^^xsd:double ;
+                   :priceNight 174 ,
+                               193 ,
+                               74 ;
+                   :stars 5 ;
+                   :typeHotel "Lujo" ,
+                              "Rural" .
+
+
+###  http://example.org/ontology#HotelPalaceZaragoza
+:HotelPalaceZaragoza rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Zaragoza ;
+                     :assessment "3.8"^^xsd:double ,
+                                 "3.9"^^xsd:double ,
+                                 "4.9"^^xsd:double ;
+                     :priceNight 120 ,
+                                 199 ,
+                                 298 ;
+                     :stars 4 ,
+                            5 ;
+                     :typeHotel "Lujo" ,
+                                "Negocios" ,
+                                "Playa" .
+
+
+###  http://example.org/ontology#HotelRoyalBarcelona
+:HotelRoyalBarcelona rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Barcelona ;
+                     :assessment "4.0"^^xsd:double ,
+                                 "4.9"^^xsd:double ;
+                     :priceNight 252 ,
+                                 269 ;
+                     :stars 4 ;
+                     :typeHotel "Playa" .
+
+
+###  http://example.org/ontology#HotelRoyalBilbao
+:HotelRoyalBilbao rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Bilbao ;
+                  :assessment "3.6"^^xsd:double ,
+                              "3.7"^^xsd:double ;
+                  :priceNight 164 ,
+                              232 ;
+                  :stars 3 ;
+                  :typeHotel "Rural" ,
+                             "Turistico" .
+
+
+###  http://example.org/ontology#HotelRoyalCádiz
+:HotelRoyalCádiz rdf:type owl:NamedIndividual ,
+                          :Hotel ;
+                 :locatedIn :Cádiz ;
+                 :assessment "3.8"^^xsd:double ,
+                             "4.8"^^xsd:double ;
+                 :priceNight 196 ,
+                             81 ;
+                 :stars 3 ;
+                 :typeHotel "Playa" ,
+                            "Turistico" .
+
+
+###  http://example.org/ontology#HotelRoyalMadrid
+:HotelRoyalMadrid rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Madrid ;
+                  :assessment "3.9"^^xsd:double ,
+                              "4.4"^^xsd:double ,
+                              "5.0"^^xsd:double ;
+                  :priceNight 131 ,
+                              146 ,
+                              203 ,
+                              50 ,
+                              67 ;
+                  :stars 3 ,
+                         4 ,
+                         5 ;
+                  :typeHotel "Negocios" ,
+                             "Playa" ,
+                             "Rural" ,
+                             "Turistico" .
+
+
+###  http://example.org/ontology#HotelRoyalMálaga
+:HotelRoyalMálaga rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Málaga ;
+                  :assessment "4.2"^^xsd:double ,
+                              "4.6"^^xsd:double ;
+                  :priceNight 150 ,
+                              175 ;
+                  :stars 3 ,
+                         5 ;
+                  :typeHotel "Rural" ,
+                             "Turistico" .
+
+
+###  http://example.org/ontology#HotelRoyalPamplona
+:HotelRoyalPamplona rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Pamplona ;
+                    :assessment "3.9"^^xsd:double ,
+                                "4.3"^^xsd:double ;
+                    :priceNight 116 ,
+                                56 ;
+                    :stars 3 ,
+                           5 ;
+                    :typeHotel "Lujo" ,
+                               "Rural" .
+
+
+###  http://example.org/ontology#HotelRoyalSanSebastián
+:HotelRoyalSanSebastián rdf:type owl:NamedIndividual ,
+                                 :Hotel ;
+                        :locatedIn :SanSebastián ;
+                        :assessment "4.4"^^xsd:double ;
+                        :priceNight 245 ;
+                        :stars 5 ;
+                        :typeHotel "Negocios" .
+
+
+###  http://example.org/ontology#HotelRoyalSevilla
+:HotelRoyalSevilla rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Sevilla ;
+                   :assessment "3.7"^^xsd:double ;
+                   :priceNight 92 ;
+                   :stars 5 ;
+                   :typeHotel "Turistico" .
+
+
+###  http://example.org/ontology#HotelRoyalValencia
+:HotelRoyalValencia rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Valencia ;
+                    :assessment "4.7"^^xsd:double ;
+                    :priceNight 76 ;
+                    :stars 5 ;
+                    :typeHotel "Turistico" .
+
+
+###  http://example.org/ontology#HotelRoyalZaragoza
+:HotelRoyalZaragoza rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Zaragoza ;
+                    :assessment "4.4"^^xsd:double ,
+                                "4.6"^^xsd:double ;
+                    :priceNight 150 ,
+                                165 ;
+                    :stars 3 ,
+                           4 ;
+                    :typeHotel "Negocios" ,
+                               "Playa" .
+
+
+###  http://example.org/ontology#HotelSolBarcelona
+:HotelSolBarcelona rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Barcelona ;
+                   :assessment "3.5"^^xsd:double ,
+                               "4.6"^^xsd:double ,
+                               "5.0"^^xsd:double ;
+                   :priceNight 181 ,
+                               189 ,
+                               222 ;
+                   :stars 4 ,
+                          5 ;
+                   :typeHotel "Lujo" ,
+                              "Rural" ,
+                              "Turistico" .
+
+
+###  http://example.org/ontology#HotelSolBilbao
+:HotelSolBilbao rdf:type owl:NamedIndividual ,
+                         :Hotel ;
+                :locatedIn :Bilbao ;
+                :assessment "4.6"^^xsd:double ,
+                            "4.9"^^xsd:double ;
+                :priceNight 290 ,
+                            56 ;
+                :stars 5 ;
+                :typeHotel "Negocios" ,
+                           "Playa" .
+
+
+###  http://example.org/ontology#HotelSolCádiz
+:HotelSolCádiz rdf:type owl:NamedIndividual ,
+                        :Hotel ;
+               :locatedIn :Cádiz ;
+               :assessment "4.6"^^xsd:double ,
+                           "4.9"^^xsd:double ;
+               :priceNight 151 ,
+                           260 ;
+               :stars 4 ,
+                      5 ;
+               :typeHotel "Negocios" ,
+                          "Turistico" .
+
+
+###  http://example.org/ontology#HotelSolMadrid
+:HotelSolMadrid rdf:type owl:NamedIndividual ,
+                         :Hotel ;
+                :locatedIn :Madrid ;
+                :assessment "4.9"^^xsd:double ;
+                :priceNight 114 ;
+                :stars 3 ;
+                :typeHotel "Negocios" .
+
+
+###  http://example.org/ontology#HotelSolMálaga
+:HotelSolMálaga rdf:type owl:NamedIndividual ,
+                         :Hotel ;
+                :locatedIn :Málaga ;
+                :assessment "4.9"^^xsd:double ;
+                :priceNight 84 ;
+                :stars 5 ;
+                :typeHotel "Negocios" .
+
+
+###  http://example.org/ontology#HotelSolSanSebastián
+:HotelSolSanSebastián rdf:type owl:NamedIndividual ,
+                               :Hotel ;
+                      :locatedIn :SanSebastián ;
+                      :assessment "4.7"^^xsd:double ;
+                      :priceNight 75 ;
+                      :stars 4 ;
+                      :typeHotel "Negocios" .
+
+
+###  http://example.org/ontology#HotelSolSevilla
+:HotelSolSevilla rdf:type owl:NamedIndividual ,
+                          :Hotel ;
+                 :locatedIn :Sevilla ;
+                 :assessment "4.0"^^xsd:double ,
+                             "4.2"^^xsd:double ,
+                             "4.7"^^xsd:double ;
+                 :priceNight 120 ,
+                             146 ,
+                             56 ;
+                 :stars 3 ,
+                        5 ;
+                 :typeHotel "Lujo" ,
+                            "Negocios" ,
+                            "Playa" .
+
+
+###  http://example.org/ontology#HotelSolValencia
+:HotelSolValencia rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Valencia ;
+                  :assessment "4.8"^^xsd:double ;
+                  :priceNight 291 ;
+                  :stars 5 ;
+                  :typeHotel "Lujo" .
+
+
+###  http://example.org/ontology#HotelSolZaragoza
+:HotelSolZaragoza rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Zaragoza ;
+                  :assessment "3.6"^^xsd:double ;
+                  :priceNight 262 ;
+                  :stars 3 ;
+                  :typeHotel "Lujo" .
+
+
+###  http://example.org/ontology#HotelVistaBarcelona
+:HotelVistaBarcelona rdf:type owl:NamedIndividual ,
+                              :Hotel ;
+                     :locatedIn :Barcelona ;
+                     :assessment "3.7"^^xsd:double ,
+                                 "4.3"^^xsd:double ,
+                                 "4.9"^^xsd:double ;
+                     :priceNight 149 ,
+                                 251 ,
+                                 74 ;
+                     :stars 3 ,
+                            4 ;
+                     :typeHotel "Playa" ,
+                                "Rural" ,
+                                "Turistico" .
+
+
+###  http://example.org/ontology#HotelVistaBilbao
+:HotelVistaBilbao rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Bilbao ;
+                  :assessment "3.7"^^xsd:double ,
+                              "4.9"^^xsd:double ;
+                  :priceNight 148 ,
+                              253 ;
+                  :stars 3 ,
+                         5 ;
+                  :typeHotel "Negocios" ,
+                             "Playa" .
+
+
+###  http://example.org/ontology#HotelVistaCádiz
+:HotelVistaCádiz rdf:type owl:NamedIndividual ,
+                          :Hotel ;
+                 :locatedIn :Cádiz ;
+                 :assessment "4.0"^^xsd:double ,
+                             "4.5"^^xsd:double ;
+                 :priceNight 150 ,
+                             254 ;
+                 :stars 4 ,
+                        5 ;
+                 :typeHotel "Playa" ,
+                            "Turistico" .
+
+
+###  http://example.org/ontology#HotelVistaMadrid
+:HotelVistaMadrid rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Madrid ;
+                  :assessment "4.0"^^xsd:double ,
+                              "4.2"^^xsd:double ,
+                              "4.4"^^xsd:double ;
+                  :priceNight 117 ,
+                              150 ,
+                              71 ;
+                  :stars 3 ,
+                         4 ;
+                  :typeHotel "Rural" ,
+                             "Turistico" .
+
+
+###  http://example.org/ontology#HotelVistaMálaga
+:HotelVistaMálaga rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Málaga ;
+                  :assessment "4.4"^^xsd:double ;
+                  :priceNight 238 ;
+                  :stars 5 ;
+                  :typeHotel "Negocios" .
+
+
+###  http://example.org/ontology#HotelVistaPamplona
+:HotelVistaPamplona rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Pamplona ;
+                    :assessment "4.2"^^xsd:double ,
+                                "4.4"^^xsd:double ;
+                    :priceNight 109 ,
+                                98 ;
+                    :stars 3 ,
+                           5 ;
+                    :typeHotel "Rural" .
+
+
+###  http://example.org/ontology#HotelVistaSanSebastián
+:HotelVistaSanSebastián rdf:type owl:NamedIndividual ,
+                                 :Hotel ;
+                        :locatedIn :SanSebastián ;
+                        :assessment "3.7"^^xsd:double ,
+                                    "4.3"^^xsd:double ,
+                                    "4.5"^^xsd:double ;
+                        :priceNight 220 ,
+                                    227 ,
+                                    99 ;
+                        :stars 4 ;
+                        :typeHotel "Negocios" ,
+                                   "Rural" .
+
+
+###  http://example.org/ontology#HotelVistaSevilla
+:HotelVistaSevilla rdf:type owl:NamedIndividual ,
+                            :Hotel ;
+                   :locatedIn :Sevilla ;
+                   :assessment "4.7"^^xsd:double ,
+                               "4.9"^^xsd:double ;
+                   :priceNight 278 ,
+                               292 ;
+                   :stars 4 ,
+                          5 ;
+                   :typeHotel "Playa" ,
+                              "Turistico" .
+
+
+###  http://example.org/ontology#HotelVistaToledo
+:HotelVistaToledo rdf:type owl:NamedIndividual ,
+                           :Hotel ;
+                  :locatedIn :Toledo ;
+                  :assessment "4.6"^^xsd:double ;
+                  :priceNight 70 ,
+                              99 ;
+                  :stars 3 ,
+                         5 ;
+                  :typeHotel "Playa" ,
+                             "Turistico" .
+
+
+###  http://example.org/ontology#HotelVistaValencia
+:HotelVistaValencia rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Valencia ;
+                    :assessment "4.6"^^xsd:double ;
+                    :priceNight 149 ;
+                    :stars 3 ;
+                    :typeHotel "Turistico" .
+
+
+###  http://example.org/ontology#HotelVistaZaragoza
+:HotelVistaZaragoza rdf:type owl:NamedIndividual ,
+                             :Hotel ;
+                    :locatedIn :Zaragoza ;
+                    :assessment "4.7"^^xsd:double ;
+                    :priceNight 131 ;
+                    :stars 5 ;
+                    :typeHotel "Lujo" .
+
+
+###  http://example.org/ontology#Madrid
+:Madrid rdf:type owl:NamedIndividual ,
+                 :City ;
+        :localization "40.4168,-3.7038" .
+
+
+###  http://example.org/ontology#MuseoBarcelona
+:MuseoBarcelona rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Barcelona ;
+                :assessment "3.8"^^xsd:double ;
+                :type "Museo" .
+
+
+###  http://example.org/ontology#MuseoBilbao
+:MuseoBilbao rdf:type owl:NamedIndividual ,
+                      :Attraction ;
+             :locatedIn :Bilbao ;
+             :assessment "4.9"^^xsd:double ;
+             :type "Parque" .
+
+
+###  http://example.org/ontology#MuseoCádiz
+:MuseoCádiz rdf:type owl:NamedIndividual ,
+                     :Attraction ;
+            :locatedIn :Cádiz ;
+            :assessment "4.6"^^xsd:double ;
+            :type "Playa" .
+
+
+###  http://example.org/ontology#MuseoMadrid
+:MuseoMadrid rdf:type owl:NamedIndividual ,
+                      :Attraction ;
+             :locatedIn :Madrid ;
+             :assessment "3.5"^^xsd:double ,
+                         "3.7"^^xsd:double ,
+                         "4.2"^^xsd:double ;
+             :type "Cultural" ,
+                   "Museo" ,
+                   "Parque" .
+
+
+###  http://example.org/ontology#MuseoMálaga
+:MuseoMálaga rdf:type owl:NamedIndividual ,
+                      :Attraction ;
+             :locatedIn :Málaga ;
+             :assessment "4.3"^^xsd:double ;
+             :type "Parque" .
+
+
+###  http://example.org/ontology#MuseoPamplona
+:MuseoPamplona rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Pamplona ;
+               :assessment "5.0"^^xsd:double ;
+               :type "Playa" .
+
+
+###  http://example.org/ontology#MuseoSanSebastián
+:MuseoSanSebastián rdf:type owl:NamedIndividual ,
+                            :Attraction ;
+                   :locatedIn :SanSebastián ;
+                   :assessment "4.2"^^xsd:double ,
+                               "4.5"^^xsd:double ;
+                   :type "Playa" .
+
+
+###  http://example.org/ontology#MuseoSevilla
+:MuseoSevilla rdf:type owl:NamedIndividual ,
+                       :Attraction ;
+              :locatedIn :Sevilla ;
+              :assessment "4.0"^^xsd:double ;
+              :type "Playa" .
+
+
+###  http://example.org/ontology#MuseoToledo
+:MuseoToledo rdf:type owl:NamedIndividual ,
+                      :Attraction ;
+             :locatedIn :Toledo ;
+             :assessment "4.2"^^xsd:double ;
+             :type "Cultural" ,
+                   "Monumento" .
+
+
+###  http://example.org/ontology#MuseoZaragoza
+:MuseoZaragoza rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Zaragoza ;
+               :assessment "3.7"^^xsd:double ,
+                           "3.8"^^xsd:double ,
+                           "4.1"^^xsd:double ,
+                           "4.3"^^xsd:double ;
+               :type "Monumento" ,
+                     "Museo" ,
+                     "Parque" ,
+                     "Playa" .
+
+
+###  http://example.org/ontology#Málaga
+:Málaga rdf:type owl:NamedIndividual ,
+                 :City ;
+        :localization "36.7213,-4.4210" .
+
+
+###  http://example.org/ontology#PalacioBarcelona
+:PalacioBarcelona rdf:type owl:NamedIndividual ,
+                           :Attraction ;
+                  :locatedIn :Barcelona ;
+                  :assessment "4.3"^^xsd:double ,
+                              "4.7"^^xsd:double ;
+                  :type "Cultural" ,
+                        "Playa" .
+
+
+###  http://example.org/ontology#PalacioBilbao
+:PalacioBilbao rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Bilbao ;
+               :assessment "4.9"^^xsd:double ;
+               :type "Museo" .
+
+
+###  http://example.org/ontology#PalacioCádiz
+:PalacioCádiz rdf:type owl:NamedIndividual ,
+                       :Attraction ;
+              :locatedIn :Cádiz ;
+              :assessment "4.9"^^xsd:double ;
+              :type "Playa" .
+
+
+###  http://example.org/ontology#PalacioMadrid
+:PalacioMadrid rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Madrid ;
+               :assessment "3.9"^^xsd:double ,
+                           "4.6"^^xsd:double ;
+               :type "Monumento" ,
+                     "Museo" .
+
+
+###  http://example.org/ontology#PalacioMálaga
+:PalacioMálaga rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Málaga ;
+               :assessment "3.9"^^xsd:double ;
+               :type "Cultural" .
+
+
+###  http://example.org/ontology#PalacioPamplona
+:PalacioPamplona rdf:type owl:NamedIndividual ,
+                          :Attraction ;
+                 :locatedIn :Pamplona ;
+                 :assessment "4.0"^^xsd:double ,
+                             "4.3"^^xsd:double ,
+                             "4.7"^^xsd:double ;
+                 :type "Cultural" ,
+                       "Playa" .
+
+
+###  http://example.org/ontology#PalacioToledo
+:PalacioToledo rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Toledo ;
+               :assessment "3.6"^^xsd:double ,
+                           "3.8"^^xsd:double ;
+               :type "Monumento" ,
+                     "Museo" ,
+                     "Parque" .
+
+
+###  http://example.org/ontology#PalacioValencia
+:PalacioValencia rdf:type owl:NamedIndividual ,
+                          :Attraction ;
+                 :locatedIn :Valencia ;
+                 :assessment "3.8"^^xsd:double ;
+                 :type "Parque" .
+
+
+###  http://example.org/ontology#PalacioZaragoza
+:PalacioZaragoza rdf:type owl:NamedIndividual ,
+                          :Attraction ;
+                 :locatedIn :Zaragoza ;
+                 :assessment "4.4"^^xsd:double ;
+                 :type "Parque" .
+
+
+###  http://example.org/ontology#Pamplona
+:Pamplona rdf:type owl:NamedIndividual ,
+                   :City ;
+          :localization "42.8169,-1.6444" .
+
+
+###  http://example.org/ontology#ParqueBarcelona
+:ParqueBarcelona rdf:type owl:NamedIndividual ,
+                          :Attraction ;
+                 :locatedIn :Barcelona ;
+                 :assessment "4.9"^^xsd:double ;
+                 :type "Parque" .
+
+
+###  http://example.org/ontology#ParqueBilbao
+:ParqueBilbao rdf:type owl:NamedIndividual ,
+                       :Attraction ;
+              :locatedIn :Bilbao ;
+              :assessment "4.6"^^xsd:double ;
+              :type "Playa" .
+
+
+###  http://example.org/ontology#ParqueCádiz
+:ParqueCádiz rdf:type owl:NamedIndividual ,
+                      :Attraction ;
+             :locatedIn :Cádiz ;
+             :assessment "4.1"^^xsd:double ,
+                         "4.2"^^xsd:double ,
+                         "4.3"^^xsd:double ,
+                         "4.6"^^xsd:double ,
+                         "4.7"^^xsd:double ;
+             :type "Museo" ,
+                   "Parque" .
+
+
+###  http://example.org/ontology#ParqueMadrid
+:ParqueMadrid rdf:type owl:NamedIndividual ,
+                       :Attraction ;
+              :locatedIn :Madrid ;
+              :assessment "3.8"^^xsd:double ,
+                          "4.3"^^xsd:double ,
+                          "4.9"^^xsd:double ;
+              :type "Cultural" ,
+                    "Parque" ,
+                    "Playa" .
+
+
+###  http://example.org/ontology#ParqueMálaga
+:ParqueMálaga rdf:type owl:NamedIndividual ,
+                       :Attraction ;
+              :locatedIn :Málaga ;
+              :assessment "4.0"^^xsd:double ,
+                          "4.4"^^xsd:double ;
+              :type "Museo" ,
+                    "Playa" .
+
+
+###  http://example.org/ontology#ParquePamplona
+:ParquePamplona rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Pamplona ;
+                :assessment "4.1"^^xsd:double ;
+                :type "Monumento" .
+
+
+###  http://example.org/ontology#ParqueSanSebastián
+:ParqueSanSebastián rdf:type owl:NamedIndividual ,
+                             :Attraction ;
+                    :locatedIn :SanSebastián ;
+                    :assessment "3.9"^^xsd:double ,
+                                "4.2"^^xsd:double ,
+                                "4.8"^^xsd:double ,
+                                "4.9"^^xsd:double ;
+                    :type "Cultural" ,
+                          "Monumento" ,
+                          "Parque" .
+
+
+###  http://example.org/ontology#ParqueSevilla
+:ParqueSevilla rdf:type owl:NamedIndividual ,
+                        :Attraction ;
+               :locatedIn :Sevilla ;
+               :assessment "4.6"^^xsd:double ;
+               :type "Cultural" .
+
+
+###  http://example.org/ontology#ParqueToledo
+:ParqueToledo rdf:type owl:NamedIndividual ,
+                       :Attraction ;
+              :locatedIn :Toledo ;
+              :assessment "3.8"^^xsd:double ,
+                          "4.8"^^xsd:double ;
+              :type "Monumento" ,
+                    "Playa" .
+
+
+###  http://example.org/ontology#ParqueValencia
+:ParqueValencia rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Valencia ;
+                :assessment "3.7"^^xsd:double ;
+                :type "Museo" .
+
+
+###  http://example.org/ontology#ParqueZaragoza
+:ParqueZaragoza rdf:type owl:NamedIndividual ,
+                         :Attraction ;
+                :locatedIn :Zaragoza ;
+                :assessment "4.5"^^xsd:double ;
+                :type "Museo" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaBarcelona
+:RestauranteDeliciaBarcelona rdf:type owl:NamedIndividual ,
+                                      :Restaurant ;
+                             :locatedIn :Barcelona ;
+                             :assessment "4.5"^^xsd:double ;
+                             :averagePrice 65 ;
+                             :typeCocina "Andaluza" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaBilbao
+:RestauranteDeliciaBilbao rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Bilbao ;
+                          :assessment "4.4"^^xsd:double ;
+                          :averagePrice 66 ;
+                          :typeCocina "Italiana" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaCádiz
+:RestauranteDeliciaCádiz rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Cádiz ;
+                         :assessment "4.7"^^xsd:double ;
+                         :averagePrice 16 ,
+                                       26 ;
+                         :typeCocina "Mediterránea" ,
+                                     "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaMadrid
+:RestauranteDeliciaMadrid rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Madrid ;
+                          :assessment "4.7"^^xsd:double ;
+                          :averagePrice 16 ;
+                          :typeCocina "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaMálaga
+:RestauranteDeliciaMálaga rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Málaga ;
+                          :assessment "3.7"^^xsd:double ,
+                                      "4.9"^^xsd:double ;
+                          :averagePrice 38 ,
+                                        70 ;
+                          :typeCocina "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaPamplona
+:RestauranteDeliciaPamplona rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Pamplona ;
+                            :assessment "3.6"^^xsd:double ,
+                                        "4.3"^^xsd:double ,
+                                        "4.9"^^xsd:double ;
+                            :averagePrice 36 ,
+                                          41 ,
+                                          42 ;
+                            :typeCocina "Andaluza" ,
+                                        "Italiana" ,
+                                        "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaSanSebastián
+:RestauranteDeliciaSanSebastián rdf:type owl:NamedIndividual ,
+                                         :Restaurant ;
+                                :locatedIn :SanSebastián ;
+                                :assessment "3.5"^^xsd:double ,
+                                            "3.6"^^xsd:double ;
+                                :averagePrice 19 ,
+                                              56 ;
+                                :typeCocina "Andaluza" ,
+                                            "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaSevilla
+:RestauranteDeliciaSevilla rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :locatedIn :Sevilla ;
+                           :assessment "3.7"^^xsd:double ,
+                                       "4.0"^^xsd:double ,
+                                       "4.2"^^xsd:double ,
+                                       "4.9"^^xsd:double ;
+                           :averagePrice 43 ,
+                                         66 ,
+                                         70 ,
+                                         75 ;
+                           :typeCocina "Andaluza" ,
+                                       "Italiana" ,
+                                       "Mediterránea" ,
+                                       "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaValencia
+:RestauranteDeliciaValencia rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Valencia ;
+                            :assessment "3.7"^^xsd:double ;
+                            :averagePrice 61 ;
+                            :typeCocina "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteDeliciaZaragoza
+:RestauranteDeliciaZaragoza rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Zaragoza ;
+                            :assessment "3.9"^^xsd:double ,
+                                        "4.1"^^xsd:double ,
+                                        "4.3"^^xsd:double ,
+                                        "4.5"^^xsd:double ,
+                                        "4.6"^^xsd:double ;
+                            :averagePrice 21 ,
+                                          38 ,
+                                          48 ,
+                                          74 ,
+                                          77 ;
+                            :typeCocina "Japonesa" ,
+                                        "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónBarcelona
+:RestauranteFusiónBarcelona rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Barcelona ;
+                            :assessment "3.8"^^xsd:double ,
+                                        "4.2"^^xsd:double ,
+                                        "5.0"^^xsd:double ;
+                            :averagePrice 15 ,
+                                          43 ,
+                                          51 ;
+                            :typeCocina "Andaluza" ,
+                                        "Mediterránea" ,
+                                        "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónBilbao
+:RestauranteFusiónBilbao rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Bilbao ;
+                         :assessment "5.0"^^xsd:double ;
+                         :averagePrice 46 ;
+                         :typeCocina "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónCádiz
+:RestauranteFusiónCádiz rdf:type owl:NamedIndividual ,
+                                 :Restaurant ;
+                        :locatedIn :Cádiz ;
+                        :assessment "3.6"^^xsd:double ,
+                                    "4.0"^^xsd:double ,
+                                    "4.8"^^xsd:double ;
+                        :averagePrice 18 ,
+                                      25 ,
+                                      57 ;
+                        :typeCocina "Andaluza" ,
+                                    "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónMadrid
+:RestauranteFusiónMadrid rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Madrid ;
+                         :assessment "4.6"^^xsd:double ,
+                                     "4.8"^^xsd:double ;
+                         :averagePrice 37 ,
+                                       43 ;
+                         :typeCocina "Italiana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónMálaga
+:RestauranteFusiónMálaga rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Málaga ;
+                         :assessment "4.7"^^xsd:double ;
+                         :averagePrice 11 ;
+                         :typeCocina "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónPamplona
+:RestauranteFusiónPamplona rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :locatedIn :Pamplona ;
+                           :assessment "4.1"^^xsd:double ,
+                                       "4.2"^^xsd:double ;
+                           :averagePrice 15 ,
+                                         40 ;
+                           :typeCocina "Andaluza" .
+
+
+###  http://example.org/ontology#RestauranteFusiónSevilla
+:RestauranteFusiónSevilla rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Sevilla ;
+                          :assessment "3.7"^^xsd:double ,
+                                      "4.9"^^xsd:double ;
+                          :averagePrice 11 ,
+                                        60 ;
+                          :typeCocina "Italiana" ,
+                                      "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteFusiónToledo
+:RestauranteFusiónToledo rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Toledo ;
+                         :assessment "4.0"^^xsd:double ,
+                                     "4.1"^^xsd:double ;
+                         :averagePrice 70 ,
+                                       74 ;
+                         :typeCocina "Italiana" ,
+                                     "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónValencia
+:RestauranteFusiónValencia rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :locatedIn :Valencia ;
+                           :assessment "3.6"^^xsd:double ,
+                                       "4.2"^^xsd:double ,
+                                       "4.3"^^xsd:double ;
+                           :averagePrice 13 ,
+                                         19 ,
+                                         46 ,
+                                         59 ;
+                           :typeCocina "Andaluza" ,
+                                       "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteFusiónZaragoza
+:RestauranteFusiónZaragoza rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :locatedIn :Zaragoza ;
+                           :assessment "3.9"^^xsd:double ,
+                                       "4.0"^^xsd:double ,
+                                       "4.7"^^xsd:double ,
+                                       "5.0"^^xsd:double ;
+                           :averagePrice 41 ,
+                                         54 ,
+                                         64 ,
+                                         77 ;
+                           :typeCocina "Andaluza" ,
+                                       "Italiana" .
+
+
+###  http://example.org/ontology#RestauranteGourmetBarcelona
+:RestauranteGourmetBarcelona rdf:type owl:NamedIndividual ,
+                                      :Restaurant ;
+                             :locatedIn :Barcelona ;
+                             :assessment "3.8"^^xsd:double ,
+                                         "4.9"^^xsd:double ;
+                             :averagePrice 39 ,
+                                           68 ;
+                             :typeCocina "Andaluza" ,
+                                         "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteGourmetCádiz
+:RestauranteGourmetCádiz rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Cádiz ;
+                         :assessment "4.3"^^xsd:double ;
+                         :averagePrice 68 ;
+                         :typeCocina "Italiana" .
+
+
+###  http://example.org/ontology#RestauranteGourmetMadrid
+:RestauranteGourmetMadrid rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Madrid ;
+                          :assessment "3.5"^^xsd:double ,
+                                      "3.8"^^xsd:double ,
+                                      "4.4"^^xsd:double ,
+                                      "4.7"^^xsd:double ,
+                                      "4.8"^^xsd:double ;
+                          :averagePrice 30 ,
+                                        46 ,
+                                        49 ,
+                                        76 ;
+                          :typeCocina "Andaluza" ,
+                                      "Japonesa" ,
+                                      "Mediterránea" ,
+                                      "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteGourmetMálaga
+:RestauranteGourmetMálaga rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Málaga ;
+                          :assessment "4.3"^^xsd:double ,
+                                      "4.4"^^xsd:double ,
+                                      "4.7"^^xsd:double ,
+                                      "4.8"^^xsd:double ;
+                          :averagePrice 28 ,
+                                        36 ,
+                                        38 ,
+                                        55 ,
+                                        57 ;
+                          :typeCocina "Andaluza" ,
+                                      "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteGourmetPamplona
+:RestauranteGourmetPamplona rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Pamplona ;
+                            :assessment "3.5"^^xsd:double ,
+                                        "4.2"^^xsd:double ,
+                                        "4.4"^^xsd:double ,
+                                        "5.0"^^xsd:double ;
+                            :averagePrice 10 ,
+                                          12 ,
+                                          32 ,
+                                          78 ;
+                            :typeCocina "Italiana" ,
+                                        "Japonesa" ,
+                                        "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteGourmetSanSebastián
+:RestauranteGourmetSanSebastián rdf:type owl:NamedIndividual ,
+                                         :Restaurant ;
+                                :locatedIn :SanSebastián ;
+                                :assessment "3.7"^^xsd:double ;
+                                :averagePrice 74 ;
+                                :typeCocina "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteGourmetSevilla
+:RestauranteGourmetSevilla rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :locatedIn :Sevilla ;
+                           :assessment "3.8"^^xsd:double ;
+                           :averagePrice 11 ;
+                           :typeCocina "Andaluza" .
+
+
+###  http://example.org/ontology#RestauranteGourmetToledo
+:RestauranteGourmetToledo rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Toledo ;
+                          :assessment "4.2"^^xsd:double ,
+                                      "4.5"^^xsd:double ;
+                          :averagePrice 19 ,
+                                        48 ;
+                          :typeCocina "Italiana" ,
+                                      "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteGourmetValencia
+:RestauranteGourmetValencia rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Valencia ;
+                            :assessment "3.8"^^xsd:double ,
+                                        "4.6"^^xsd:double ,
+                                        "4.9"^^xsd:double ;
+                            :averagePrice 38 ,
+                                          48 ,
+                                          59 ;
+                            :typeCocina "Andaluza" .
+
+
+###  http://example.org/ontology#RestauranteGourmetZaragoza
+:RestauranteGourmetZaragoza rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Zaragoza ;
+                            :assessment "4.5"^^xsd:double ,
+                                        "4.6"^^xsd:double ;
+                            :averagePrice 27 ,
+                                          65 ;
+                            :typeCocina "Andaluza" ,
+                                        "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteSaborCádiz
+:RestauranteSaborCádiz rdf:type owl:NamedIndividual ,
+                                :Restaurant ;
+                       :locatedIn :Cádiz ;
+                       :assessment "3.6"^^xsd:double ,
+                                   "3.9"^^xsd:double ;
+                       :averagePrice 11 ,
+                                     34 ;
+                       :typeCocina "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteSaborMálaga
+:RestauranteSaborMálaga rdf:type owl:NamedIndividual ,
+                                 :Restaurant ;
+                        :locatedIn :Málaga ;
+                        :assessment "3.8"^^xsd:double ,
+                                    "4.4"^^xsd:double ,
+                                    "4.7"^^xsd:double ;
+                        :averagePrice 43 ,
+                                      56 ,
+                                      78 ;
+                        :typeCocina "Andaluza" ,
+                                    "Italiana" ,
+                                    "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteSaborSanSebastián
+:RestauranteSaborSanSebastián rdf:type owl:NamedIndividual ,
+                                       :Restaurant ;
+                              :locatedIn :SanSebastián ;
+                              :assessment "4.9"^^xsd:double ;
+                              :averagePrice 39 ;
+                              :typeCocina "Andaluza" .
+
+
+###  http://example.org/ontology#RestauranteSaborSevilla
+:RestauranteSaborSevilla rdf:type owl:NamedIndividual ,
+                                  :Restaurant ;
+                         :locatedIn :Sevilla ;
+                         :assessment "4.0"^^xsd:double ,
+                                     "4.1"^^xsd:double ,
+                                     "4.4"^^xsd:double ;
+                         :averagePrice 48 ,
+                                       72 ,
+                                       80 ;
+                         :typeCocina "Andaluza" ,
+                                     "Italiana" ,
+                                     "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteSaborValencia
+:RestauranteSaborValencia rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Valencia ;
+                          :assessment "3.6"^^xsd:double ,
+                                      "4.2"^^xsd:double ;
+                          :averagePrice 21 ,
+                                        28 ;
+                          :typeCocina "Andaluza" ,
+                                      "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteSaborZaragoza
+:RestauranteSaborZaragoza rdf:type owl:NamedIndividual ,
+                                   :Restaurant ;
+                          :locatedIn :Zaragoza ;
+                          :assessment "4.6"^^xsd:double ;
+                          :averagePrice 58 ;
+                          :typeCocina "Italiana" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónCádiz
+:RestauranteTradiciónCádiz rdf:type owl:NamedIndividual ,
+                                    :Restaurant ;
+                           :locatedIn :Cádiz ;
+                           :assessment "3.9"^^xsd:double ,
+                                       "4.0"^^xsd:double ;
+                           :averagePrice 41 ,
+                                         53 ;
+                           :typeCocina "Italiana" ,
+                                       "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónMadrid
+:RestauranteTradiciónMadrid rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Madrid ;
+                            :assessment "4.0"^^xsd:double ,
+                                        "4.2"^^xsd:double ,
+                                        "4.8"^^xsd:double ;
+                            :averagePrice 30 ,
+                                          38 ,
+                                          59 ,
+                                          75 ;
+                            :typeCocina "Italiana" ,
+                                        "Japonesa" ,
+                                        "Mediterránea" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónMálaga
+:RestauranteTradiciónMálaga rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Málaga ;
+                            :assessment "4.1"^^xsd:double ;
+                            :averagePrice 35 ;
+                            :typeCocina "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónSanSebastián
+:RestauranteTradiciónSanSebastián rdf:type owl:NamedIndividual ,
+                                           :Restaurant ;
+                                  :locatedIn :SanSebastián ;
+                                  :assessment "3.7"^^xsd:double ,
+                                              "5.0"^^xsd:double ;
+                                  :averagePrice 45 ,
+                                                61 ,
+                                                66 ;
+                                  :typeCocina "Italiana" ,
+                                              "Japonesa" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónSevilla
+:RestauranteTradiciónSevilla rdf:type owl:NamedIndividual ,
+                                      :Restaurant ;
+                             :locatedIn :Sevilla ;
+                             :assessment "3.8"^^xsd:double ,
+                                         "4.3"^^xsd:double ,
+                                         "4.5"^^xsd:double ;
+                             :averagePrice 15 ,
+                                           66 ,
+                                           80 ;
+                             :typeCocina "Italiana" ,
+                                         "Mediterránea" ,
+                                         "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónToledo
+:RestauranteTradiciónToledo rdf:type owl:NamedIndividual ,
+                                     :Restaurant ;
+                            :locatedIn :Toledo ;
+                            :assessment "3.7"^^xsd:double ,
+                                        "4.8"^^xsd:double ;
+                            :averagePrice 38 ,
+                                          46 ;
+                            :typeCocina "Japonesa" ,
+                                        "Mexicana" .
+
+
+###  http://example.org/ontology#RestauranteTradiciónZaragoza
+:RestauranteTradiciónZaragoza rdf:type owl:NamedIndividual ,
+                                       :Restaurant ;
+                              :locatedIn :Zaragoza ;
+                              :assessment "4.4"^^xsd:double ;
+                              :averagePrice 56 ;
+                              :typeCocina "Andaluza" .
+
+
+###  http://example.org/ontology#SanSebastián
+:SanSebastián rdf:type owl:NamedIndividual ,
+                       :City ;
+              :localization "43.3183,-1.9812" .
+
+
+###  http://example.org/ontology#Sevilla
+:Sevilla rdf:type owl:NamedIndividual ,
+                  :City ;
+         :localization "37.3886,-5.9823" .
+
+
+###  http://example.org/ontology#Toledo
+:Toledo rdf:type owl:NamedIndividual ,
+                 :City ;
+        :localization "39.8628,-4.0273" .
+
+
+###  http://example.org/ontology#Transport_1
+:Transport_1 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Madrid ;
+             :averageCost "8.85"^^xsd:double ;
+             :company "Urban Madrid" ;
+             :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_10
+:Transport_10 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "9.48"^^xsd:double ;
+              :company "Trans Sevilla" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_100
+:Transport_100 rdf:type owl:NamedIndividual ,
+                        :Transport ;
+               :locatedIn :Pamplona ;
+               :averageCost "3.14"^^xsd:double ;
+               :company "Trans Pamplona" ;
+               :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_11
+:Transport_11 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Valencia ;
+              :averageCost "9.05"^^xsd:double ;
+              :company "Trans Valencia" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_12
+:Transport_12 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "8.03"^^xsd:double ;
+              :company "City Sevilla" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_13
+:Transport_13 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Cádiz ;
+              :averageCost "5.87"^^xsd:double ;
+              :company "City Cádiz" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_14
+:Transport_14 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "7.11"^^xsd:double ;
+              :company "Movi Pamplona" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_15
+:Transport_15 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Cádiz ;
+              :averageCost "2.93"^^xsd:double ;
+              :company "Movi Cádiz" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_16
+:Transport_16 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "7.66"^^xsd:double ;
+              :company "City Málaga" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_17
+:Transport_17 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "6.58"^^xsd:double ;
+              :company "Urban Bilbao" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_18
+:Transport_18 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "6.84"^^xsd:double ;
+              :company "Metro Bilbao" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_19
+:Transport_19 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "8.58"^^xsd:double ;
+              :company "City Bilbao" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_2
+:Transport_2 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Bilbao ;
+             :averageCost "5.75"^^xsd:double ;
+             :company "Trans Bilbao" ;
+             :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_20
+:Transport_20 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "9.2"^^xsd:double ;
+              :company "Movi Bilbao" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_21
+:Transport_21 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "8.55"^^xsd:double ;
+              :company "City Pamplona" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_22
+:Transport_22 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Zaragoza ;
+              :averageCost "1.11"^^xsd:double ;
+              :company "Urban Zaragoza" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_23
+:Transport_23 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "4.83"^^xsd:double ;
+              :company "Movi Pamplona" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_24
+:Transport_24 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Valencia ;
+              :averageCost "7.57"^^xsd:double ;
+              :company "Urban Valencia" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_25
+:Transport_25 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Zaragoza ;
+              :averageCost "4.04"^^xsd:double ;
+              :company "Metro Zaragoza" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_26
+:Transport_26 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "2.9"^^xsd:double ;
+              :company "Metro Pamplona" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_27
+:Transport_27 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Barcelona ;
+              :averageCost "3.54"^^xsd:double ;
+              :company "Urban Barcelona" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_28
+:Transport_28 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "9.89"^^xsd:double ;
+              :company "Urban Pamplona" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_29
+:Transport_29 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "4.09"^^xsd:double ;
+              :company "Metro San Sebastián" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_3
+:Transport_3 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Toledo ;
+             :averageCost "3.61"^^xsd:double ;
+             :company "Trans Toledo" ;
+             :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_30
+:Transport_30 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "2.87"^^xsd:double ;
+              :company "Urban Málaga" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_31
+:Transport_31 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "9.67"^^xsd:double ;
+              :company "Urban San Sebastián" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_32
+:Transport_32 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "4.18"^^xsd:double ;
+              :company "Metro Madrid" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_33
+:Transport_33 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "7.12"^^xsd:double ;
+              :company "Metro Madrid" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_34
+:Transport_34 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "1.12"^^xsd:double ;
+              :company "Urban San Sebastián" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_35
+:Transport_35 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "4.31"^^xsd:double ;
+              :company "Metro Bilbao" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_36
+:Transport_36 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Barcelona ;
+              :averageCost "2.12"^^xsd:double ;
+              :company "City Barcelona" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_37
+:Transport_37 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "7.55"^^xsd:double ;
+              :company "Trans Málaga" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_38
+:Transport_38 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "5.09"^^xsd:double ;
+              :company "Movi Madrid" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_39
+:Transport_39 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "5.49"^^xsd:double ;
+              :company "Movi Sevilla" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_4
+:Transport_4 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Zaragoza ;
+             :averageCost "5.79"^^xsd:double ;
+             :company "City Zaragoza" ;
+             :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_40
+:Transport_40 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Toledo ;
+              :averageCost "6.19"^^xsd:double ;
+              :company "Urban Toledo" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_41
+:Transport_41 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Barcelona ;
+              :averageCost "3.57"^^xsd:double ;
+              :company "Metro Barcelona" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_42
+:Transport_42 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "8.2"^^xsd:double ;
+              :company "Urban Sevilla" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_43
+:Transport_43 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "3.05"^^xsd:double ;
+              :company "City Pamplona" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_44
+:Transport_44 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "3.21"^^xsd:double ;
+              :company "Movi San Sebastián" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_45
+:Transport_45 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "9.48"^^xsd:double ;
+              :company "Metro Pamplona" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_46
+:Transport_46 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "4.31"^^xsd:double ;
+              :company "Metro Pamplona" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_47
+:Transport_47 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "4.77"^^xsd:double ;
+              :company "Movi San Sebastián" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_48
+:Transport_48 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Toledo ;
+              :averageCost "3.04"^^xsd:double ;
+              :company "Movi Toledo" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_49
+:Transport_49 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "1.21"^^xsd:double ;
+              :company "City Madrid" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_5
+:Transport_5 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Cádiz ;
+             :averageCost "4.63"^^xsd:double ;
+             :company "Movi Cádiz" ;
+             :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_50
+:Transport_50 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Zaragoza ;
+              :averageCost "8.0"^^xsd:double ;
+              :company "Urban Zaragoza" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_51
+:Transport_51 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "9.76"^^xsd:double ;
+              :company "Urban Madrid" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_52
+:Transport_52 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "8.92"^^xsd:double ;
+              :company "Trans Madrid" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_53
+:Transport_53 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Toledo ;
+              :averageCost "5.6"^^xsd:double ;
+              :company "Urban Toledo" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_54
+:Transport_54 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "6.97"^^xsd:double ;
+              :company "Metro Málaga" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_55
+:Transport_55 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Toledo ;
+              :averageCost "7.33"^^xsd:double ;
+              :company "Movi Toledo" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_56
+:Transport_56 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Valencia ;
+              :averageCost "6.46"^^xsd:double ;
+              :company "Trans Valencia" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_57
+:Transport_57 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Valencia ;
+              :averageCost "2.9"^^xsd:double ;
+              :company "Movi Valencia" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_58
+:Transport_58 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "2.38"^^xsd:double ;
+              :company "Movi Pamplona" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_59
+:Transport_59 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "8.71"^^xsd:double ;
+              :company "Metro San Sebastián" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_6
+:Transport_6 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Pamplona ;
+             :averageCost "8.48"^^xsd:double ;
+             :company "Trans Pamplona" ;
+             :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_60
+:Transport_60 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "1.88"^^xsd:double ;
+              :company "Urban Madrid" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_61
+:Transport_61 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "7.18"^^xsd:double ;
+              :company "Metro Bilbao" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_62
+:Transport_62 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Cádiz ;
+              :averageCost "9.86"^^xsd:double ;
+              :company "City Cádiz" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_63
+:Transport_63 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "7.8"^^xsd:double ;
+              :company "Metro Málaga" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_64
+:Transport_64 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Barcelona ;
+              :averageCost "8.1"^^xsd:double ;
+              :company "City Barcelona" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_65
+:Transport_65 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "4.56"^^xsd:double ;
+              :company "Urban Pamplona" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_66
+:Transport_66 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "5.15"^^xsd:double ;
+              :company "Metro Sevilla" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_67
+:Transport_67 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Toledo ;
+              :averageCost "2.56"^^xsd:double ;
+              :company "Metro Toledo" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_68
+:Transport_68 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "8.71"^^xsd:double ;
+              :company "Trans Málaga" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_69
+:Transport_69 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "9.88"^^xsd:double ;
+              :company "Metro Pamplona" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_7
+:Transport_7 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Cádiz ;
+             :averageCost "3.4"^^xsd:double ;
+             :company "Metro Cádiz" ;
+             :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_70
+:Transport_70 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "9.24"^^xsd:double ;
+              :company "Urban Bilbao" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_71
+:Transport_71 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Barcelona ;
+              :averageCost "2.86"^^xsd:double ;
+              :company "Movi Barcelona" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_72
+:Transport_72 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "6.15"^^xsd:double ;
+              :company "Urban Sevilla" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_73
+:Transport_73 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Cádiz ;
+              :averageCost "1.65"^^xsd:double ;
+              :company "Trans Cádiz" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_74
+:Transport_74 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "3.09"^^xsd:double ;
+              :company "Urban Sevilla" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_75
+:Transport_75 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "2.69"^^xsd:double ;
+              :company "Metro Pamplona" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_76
+:Transport_76 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "4.06"^^xsd:double ;
+              :company "City Madrid" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_77
+:Transport_77 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "8.3"^^xsd:double ;
+              :company "Metro Madrid" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_78
+:Transport_78 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "7.47"^^xsd:double ;
+              :company "Movi Bilbao" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_79
+:Transport_79 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "9.83"^^xsd:double ;
+              :company "Trans Sevilla" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_8
+:Transport_8 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Madrid ;
+             :averageCost "4.32"^^xsd:double ;
+             :company "City Madrid" ;
+             :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_80
+:Transport_80 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "5.84"^^xsd:double ;
+              :company "Trans Pamplona" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_81
+:Transport_81 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "2.69"^^xsd:double ;
+              :company "City Bilbao" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_82
+:Transport_82 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "6.8"^^xsd:double ;
+              :company "City Madrid" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_83
+:Transport_83 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Toledo ;
+              :averageCost "4.59"^^xsd:double ;
+              :company "City Toledo" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_84
+:Transport_84 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "1.68"^^xsd:double ;
+              :company "Trans San Sebastián" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_85
+:Transport_85 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "1.58"^^xsd:double ;
+              :company "Movi Sevilla" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_86
+:Transport_86 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Sevilla ;
+              :averageCost "1.98"^^xsd:double ;
+              :company "City Sevilla" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_87
+:Transport_87 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Barcelona ;
+              :averageCost "6.29"^^xsd:double ;
+              :company "Movi Barcelona" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_88
+:Transport_88 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Zaragoza ;
+              :averageCost "7.14"^^xsd:double ;
+              :company "Trans Zaragoza" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_89
+:Transport_89 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Valencia ;
+              :averageCost "9.37"^^xsd:double ;
+              :company "Urban Valencia" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_9
+:Transport_9 rdf:type owl:NamedIndividual ,
+                      :Transport ;
+             :locatedIn :Barcelona ;
+             :averageCost "8.72"^^xsd:double ;
+             :company "Metro Barcelona" ;
+             :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_90
+:Transport_90 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Zaragoza ;
+              :averageCost "1.9"^^xsd:double ;
+              :company "City Zaragoza" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_91
+:Transport_91 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Bilbao ;
+              :averageCost "3.28"^^xsd:double ;
+              :company "Urban Bilbao" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Transport_92
+:Transport_92 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "2.82"^^xsd:double ;
+              :company "Metro Madrid" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_93
+:Transport_93 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Valencia ;
+              :averageCost "2.22"^^xsd:double ;
+              :company "Trans Valencia" ;
+              :type "Metro" .
+
+
+###  http://example.org/ontology#Transport_94
+:Transport_94 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Málaga ;
+              :averageCost "6.76"^^xsd:double ;
+              :company "Movi Málaga" ;
+              :type "Autobús" .
+
+
+###  http://example.org/ontology#Transport_95
+:Transport_95 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Madrid ;
+              :averageCost "3.28"^^xsd:double ;
+              :company "Trans Madrid" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_96
+:Transport_96 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Zaragoza ;
+              :averageCost "5.11"^^xsd:double ;
+              :company "Trans Zaragoza" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_97
+:Transport_97 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Cádiz ;
+              :averageCost "1.56"^^xsd:double ;
+              :company "Trans Cádiz" ;
+              :type "Bicicleta Pública" .
+
+
+###  http://example.org/ontology#Transport_98
+:Transport_98 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :Pamplona ;
+              :averageCost "3.92"^^xsd:double ;
+              :company "City Pamplona" ;
+              :type "Tranvía" .
+
+
+###  http://example.org/ontology#Transport_99
+:Transport_99 rdf:type owl:NamedIndividual ,
+                       :Transport ;
+              :locatedIn :SanSebastián ;
+              :averageCost "1.05"^^xsd:double ;
+              :company "Metro San Sebastián" ;
+              :type "Taxi" .
+
+
+###  http://example.org/ontology#Valencia
+:Valencia rdf:type owl:NamedIndividual ,
+                   :City ;
+          :hasTransport :Transport_11 ;
+          :localization "39.4699,-0.3763" .
+
+
+###  http://example.org/ontology#Zaragoza
+:Zaragoza rdf:type owl:NamedIndividual ,
+                   :City ;
+          :localization "41.6488,-0.8891" .
+
+
+[ <http://swrl.stcommentanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean
+] .
+
+#################################################################
+#    Annotations
+#################################################################
+
+<http://purl.org/dc/terms/> <http://purl.org/dc/terms/publisher> <http://purl.org/dc/aboutdcmi#DCMI> .
+
+
+<http://purl.org/dc/terms/DCMIType> rdfs:comment "The set of classes specified by the DCMI Type Vocabulary, used to categorize the nature or genre of the resource."@en ;
+                                    rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                    rdfs:label "DCMI Type Vocabulary"@en ;
+                                    rdfs:seeAlso <http://purl.org/dc/dcmitype/> .
+
+
+<http://purl.org/dc/terms/DDC> rdfs:comment "The set of conceptual resources specified by the Dewey Decimal Classification."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "DDC"@en ;
+                               rdfs:seeAlso <http://www.oclc.org/dewey/> .
+
+
+<http://purl.org/dc/terms/IMT> rdfs:comment "The set of media types specified by the Internet Assigned Numbers Authority."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "IMT"@en ;
+                               rdfs:seeAlso <http://www.iana.org/assignments/media-types/> .
+
+
+<http://purl.org/dc/terms/LCC> rdfs:comment "The set of conceptual resources specified by the Library of Congress Classification."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "LCC"@en ;
+                               rdfs:seeAlso <http://lcweb.loc.gov/catdir/cpso/lcco/lcco.html> .
+
+
+<http://purl.org/dc/terms/LCSH> rdfs:comment "The set of labeled concepts specified by the Library of Congress Subject Headings."@en ;
+                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                rdfs:label "LCSH"@en .
+
+
+<http://purl.org/dc/terms/MESH> rdfs:comment "The set of labeled concepts specified by the Medical Subject Headings."@en ;
+                                rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                rdfs:label "MeSH"@en ;
+                                rdfs:seeAlso <http://www.nlm.nih.gov/mesh/meshhome.html> .
+
+
+<http://purl.org/dc/terms/NLM> rdfs:comment "The set of conceptual resources specified by the National Library of Medicine Classification."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "NLM"@en ;
+                               rdfs:seeAlso <http://wwwcf.nlm.nih.gov/class/> .
+
+
+<http://purl.org/dc/terms/TGN> rdfs:comment "The set of places specified by the Getty Thesaurus of Geographic Names."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "TGN"@en ;
+                               rdfs:seeAlso <http://www.getty.edu/research/tools/vocabulary/tgn/index.html> .
+
+
+<http://purl.org/dc/terms/UDC> rdfs:comment "The set of conceptual resources specified by the Universal Decimal Classification."@en ;
+                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                               rdfs:label "UDC"@en ;
+                               rdfs:seeAlso <http://www.udcc.org/> .
+
+
+<http://purl.org/dc/terms/creator> <http://purl.org/dc/terms/description> "Recommended practice is to identify the creator with a URI.  If this is not possible or feasible, a literal value that identifies the creator may be provided."@en ;
+                                   rdfs:comment "An entity responsible for making the resource."@en ;
+                                   rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                   rdfs:label "Creator"@en .
+
+
+<http://purl.org/dc/terms/instructionalMethod> <http://purl.org/dc/terms/description> "Instructional Method typically includes ways of presenting instructional materials or conducting instructional activities, patterns of learner-to-learner and learner-to-instructor interactions, and mechanisms by which group and individual levels of learning are measured.  Instructional methods include all aspects of the instruction and learning processes from planning and implementation through evaluation and feedback."@en ;
+                                               rdfs:comment "A process, used to engender knowledge, attitudes and skills, that the described resource is designed to support."@en ;
+                                               rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                               rdfs:label "Instructional Method"@en .
+
+
+<http://purl.org/dc/terms/provenance> <http://purl.org/dc/terms/description> "The statement may include a description of any changes successive custodians made to the resource."@en ;
+                                      rdfs:comment "A statement of any changes in ownership and custody of the resource since its creation that are significant for its authenticity, integrity, and interpretation."@en ;
+                                      rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                      rdfs:label "Provenance"@en .
+
+
+<http://purl.org/dc/terms/rightsHolder> <http://purl.org/dc/terms/description> "Recommended practice is to refer to the rights holder with a URI. If this is not possible or feasible, a literal value that identifies the rights holder may be provided."@en ;
+                                        rdfs:comment "A person or organization owning or managing rights over the resource."@en ;
+                                        rdfs:isDefinedBy <http://purl.org/dc/terms/> ;
+                                        rdfs:label "Rights Holder"@en .
+
+
+#################################################################
+#    Rules
+#################################################################
+
+<http://www.w3.org/2002/07/c> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/e> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/h> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/p> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+<http://www.w3.org/2002/07/v> rdf:type <http://www.w3.org/2003/11/swrl#Variable> .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "comment" ;
+   rdfs:label "S2" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :City ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/c>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#IndividualPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :organizesEvent ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/c> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/e>
+                                                                ] ;
+                                                      rdf:rest rdf:nil
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :CityWithEvents ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/c>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ rdfs:comment "comment" ;
+   rdfs:label "S3" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :stars ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/e>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#propertyPredicate> :priceNight ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                                             <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/p>
+                                                                           ] ;
+                                                                 rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#equal> ;
+                                                                                        <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first <http://www.w3.org/2002/07/e> ;
+                                                                                                                                     rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first 5 ;
+                                                                                                                                                rdf:rest rdf:nil
+                                                                                                                                              ]
+                                                                                                                                   ]
+                                                                                      ] ;
+                                                                            rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                                       rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#lessThan> ;
+                                                                                                   <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                                                rdf:first <http://www.w3.org/2002/07/p> ;
+                                                                                                                                                rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                                           rdf:first 100 ;
+                                                                                                                                                           rdf:rest rdf:nil
+                                                                                                                                                         ]
+                                                                                                                                              ]
+                                                                                                 ] ;
+                                                                                       rdf:rest rdf:nil
+                                                                                     ]
+                                                                          ]
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+[ <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^xsd:boolean ;
+   rdfs:comment "comment" ;
+   rdfs:label "S1" ;
+   rdf:type <http://www.w3.org/2003/11/swrl#Imp> ;
+   <http://www.w3.org/2003/11/swrl#body> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :Hotel ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                      rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#DatavaluedPropertyAtom> ;
+                                                                  <http://www.w3.org/2003/11/swrl#propertyPredicate> :assessment ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> ;
+                                                                  <http://www.w3.org/2003/11/swrl#argument2> <http://www.w3.org/2002/07/v>
+                                                                ] ;
+                                                      rdf:rest [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                                                 rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#BuiltinAtom> ;
+                                                                             <http://www.w3.org/2003/11/swrl#builtin> <http://www.w3.org/2003/11/swrlb#greaterThan> ;
+                                                                             <http://www.w3.org/2003/11/swrl#arguments> [ rdf:type rdf:List ;
+                                                                                                                          rdf:first <http://www.w3.org/2002/07/v> ;
+                                                                                                                          rdf:rest [ rdf:type rdf:List ;
+                                                                                                                                     rdf:first 4.5 ;
+                                                                                                                                     rdf:rest rdf:nil
+                                                                                                                                   ]
+                                                                                                                        ]
+                                                                           ] ;
+                                                                 rdf:rest rdf:nil
+                                                               ]
+                                                    ]
+                                         ] ;
+   <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
+                                           rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
+                                                     ] ;
+                                           rdf:rest rdf:nil
+                                         ]
+ ] .
+
+###  Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/
