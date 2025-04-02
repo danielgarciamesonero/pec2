@@ -1,28 +1,34 @@
-<rdf:RDF
-    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
-    xmlns:owl="http://www.w3.org/2002/07/owl#"
-    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
-    xmlns:dc="http://purl.org/dc/elements/1.1/"
-    xmlns:dcterms="http://purl.org/dc/terms/"
- 
-    xmlns:ex="https://danielgarciamesonero.github.io/pec2/ont.owl#"
+<owl:Ontology rdf:about="https://danielgarciamesonero.github.io/pec2/ont.owl">
     
-    xml:base="https://danielgarciamesonero.github.io/pec2/ont.owl">
-        <dc:description xml:lang="en">Models key tourism elements such as attractions, events, hotels, restaurants, and transport in a structured way. It facilitates the analysis and reuse of tourism knowledge in urban environments for smart applications.</dc:description>
-        <dc:title xml:lang="en">Smart Tourism and Recommendations Ontology</dc:title>
-        <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-01</dcterms:created>
-        <dcterms:creator xml:lang="en">Daniel García</dcterms:creator>
-        <rdfs:comment xml:lang="en">Ontology that models tourism-related data such as cities, events, hotels, and transport for smart recommendations.</rdfs:comment>
-        <rdfs:label xml:lang="en">Smart Tourism Ontology</rdfs:label>
-        <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    <!-- Descripción general -->
+    <dc:title xml:lang="en">Smart Tourism and Recommendations Ontology</dc:title>
+    <dc:description xml:lang="en">
+        Models key tourism elements such as attractions, events, hotels, restaurants, and transport in a structured way. 
+        It facilitates the analysis and reuse of tourism knowledge in urban environments for smart applications.
+    </dc:description>
+    <rdfs:label xml:lang="en">Smart Tourism Ontology</rdfs:label>
+    <rdfs:comment xml:lang="en">Ontology that models tourism-related data such as cities, events, hotels, and transport for smart recommendations.</rdfs:comment>
 
-<dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-<owl:versionIRI rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl"/>
-<rdfs:isDefinedBy rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl#"/>
+    <!-- Metadatos de versión -->
+    <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
+    <owl:versionIRI rdf:resource="https://danielgarciamesonero.github.io/pec2/ont-1.0.owl"/>
+    <owl:priorVersion rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl/0.9"/>
 
+    <!-- Autoría y publicación -->
+    <dcterms:creator xml:lang="en">Daniel García Mesonero</dcterms:creator>
+    <dcterms:contributor xml:lang="en">PEC2 - UOC</dcterms:contributor>
+    <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-01</dcterms:created>
+    <dcterms:issued rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-02</dcterms:issued>
+    <dcterms:publisher xml:lang="en">Universitat Oberta de Catalunya</dcterms:publisher>
 
-    </owl:Ontology>
+    <!-- Licencia -->
+    <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
+
+    <!-- Namespace declarado explícitamente -->
+    <rdfs:isDefinedBy rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl#"/>
+
+</owl:Ontology>
+
     
 
 
