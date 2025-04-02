@@ -29,7 +29,7 @@
                                                        rdfs:comment "Ontology that models tourism-related data such as cities, events, hotels, and transport for smart recommendations."@en ;
                                                        rdfs:isDefinedBy ex: ;
                                                        rdfs:label "Smart Tourism Ontology"@en ;
-                                                       owl:priorVersion <https://danielgarciamesonero.github.io/pec2/ont.owl/0.9> ;
+                                                       owl:priorVersion <https://danielgarciamesonero.github.io/pec2/ont.owl> ;
                                                        owl:versionInfo 1.0 .
 
 #################################################################
