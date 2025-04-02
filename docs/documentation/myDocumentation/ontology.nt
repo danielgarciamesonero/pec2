@@ -586,22 +586,13 @@
 # #################################################################
 # 
 # 
-# http://www.co-ode.org/ontologies/ont.owl#hasLocation
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.w3.org/2002/07/owl#inverseOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn> .
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."@en .
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "hasLocation"@en .
-# 
-# http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent> .
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> .
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the city or organization responsible for organizing a given event."@en .
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isOrgenizedBy" .
+# https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation
+<https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation> <http://www.w3.org/2002/07/owl#inverseOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2002/07/owl#Thing> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation> <http://www.w3.org/2000/01/rdf-schema#label> "hasLocation"@en .
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport
 <https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -609,6 +600,15 @@
 <https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport> <http://www.w3.org/2000/01/rdf-schema#range> <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Has transport"@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport> <http://www.w3.org/2000/01/rdf-schema#label> "hasTransport"@en .
+# 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#subPropertyOf> <http://www.w3.org/2002/07/owl#topObjectProperty> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/2002/07/owl#inverseOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#range> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#comment> "Indicates the city or organization responsible for organizing a given event."@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy> <http://www.w3.org/2000/01/rdf-schema#label> "isOrgenizedBy" .
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#isTransportIn
 <https://danielgarciamesonero.github.io/pec2/ont.owl#isTransportIn> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#ObjectProperty> .
@@ -639,7 +639,7 @@
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#assessment
 <https://danielgarciamesonero.github.io/pec2/ont.owl#assessment> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#assessment> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#assessment> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#assessment> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#double> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#assessment> <http://www.w3.org/2000/01/rdf-schema#comment> "A rating or evaluation score for the item (often based on user reviews or quality)."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#assessment> <http://www.w3.org/2000/01/rdf-schema#label> "assessment"@en .
@@ -681,7 +681,7 @@
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#name
 <https://danielgarciamesonero.github.io/pec2/ont.owl#name> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#name> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.co-ode.org/ontologies/ont.owl#NamedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#name> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#name> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#name> <http://www.w3.org/2000/01/rdf-schema#comment> "The name or title of the item."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#name> <http://www.w3.org/2000/01/rdf-schema#label> "name"@en .
@@ -702,7 +702,7 @@
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#type
 <https://danielgarciamesonero.github.io/pec2/ont.owl#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#DatatypeProperty> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#type> <http://www.w3.org/2000/01/rdf-schema#domain> <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#type> <http://www.w3.org/2000/01/rdf-schema#domain> <https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#type> <http://www.w3.org/2000/01/rdf-schema#range> <http://www.w3.org/2001/XMLSchema#string> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#type> <http://www.w3.org/2000/01/rdf-schema#comment> "A general type or category of the item."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#type> <http://www.w3.org/2000/01/rdf-schema#label> "type"@en .
@@ -730,52 +730,6 @@
 # #################################################################
 # 
 # 
-# http://www.co-ode.org/ontologies/ont.owl#BudgetHotel
-<http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> .
-<http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel that offers 5-star service at a price lower than 100€ per night." .
-<http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> <http://www.w3.org/2000/01/rdf-schema#label> "BudgetHotel"@en .
-# 
-# http://www.co-ode.org/ontologies/ont.owl#HotelInCity
-<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
-_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
-_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
-_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn> .
-_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> .
-_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> .
-<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel located within an urban area."@en .
-<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> <http://www.w3.org/2000/01/rdf-schema#label> "HotelInCity"@en .
-# 
-# http://www.co-ode.org/ontologies/ont.owl#NamedEntity
-<http://www.co-ode.org/ontologies/ont.owl#NamedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.co-ode.org/ontologies/ont.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."@en .
-<http://www.co-ode.org/ontologies/ont.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "NamedEntity"@en .
-# 
-# http://www.co-ode.org/ontologies/ont.owl#RatedEntity
-<http://www.co-ode.org/ontologies/ont.owl#RatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.co-ode.org/ontologies/ont.owl#RatedEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#NamedEntity> .
-<http://www.co-ode.org/ontologies/ont.owl#RatedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."@en .
-<http://www.co-ode.org/ontologies/ont.owl#RatedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "RatedEntity"@en .
-# 
-# http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel
-<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> .
-<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Recommended Hotel"@en .
-<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#label> "RecommendedHotel"@en .
-# 
-# http://www.co-ode.org/ontologies/ont.owl#TypedEntity
-<http://www.co-ode.org/ontologies/ont.owl#TypedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<http://www.co-ode.org/ontologies/ont.owl#TypedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that is classified by type, such as restaurants or attractions."@en .
-<http://www.co-ode.org/ontologies/ont.owl#TypedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "TypedEntity"@en .
-# 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#AirTransport
 <https://danielgarciamesonero.github.io/pec2/ont.owl#AirTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#AirTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> .
@@ -784,9 +738,15 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction> <http://www.w3.org/2000/01/rdf-schema#comment> "A place or feature that attracts tourists or visitors"@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction> <http://www.w3.org/2000/01/rdf-schema#label> "Attraction"@en .
+# 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel
+<https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel that offers 5-star service at a price lower than 100€ per night." .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel> <http://www.w3.org/2000/01/rdf-schema#label> "BudgetHotel"@en .
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#BusTransport
 <https://danielgarciamesonero.github.io/pec2/ont.owl#BusTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -808,29 +768,29 @@ _:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/19
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
-_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-_:genid5 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid8 .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid6 .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid7 .
-_:genid7 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> .
-_:genid7 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent> .
-_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
-_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid1 .
+_:genid1 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid1 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid4 .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid2 .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid3 .
+_:genid3 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> .
+_:genid3 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent> .
+_:genid3 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid2 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
+_:genid4 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> <http://www.w3.org/2000/01/rdf-schema#comment> "A city that organizes at least one event."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents> <http://www.w3.org/2000/01/rdf-schema#label> "CityWithEvents"@en .
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid9 .
-_:genid9 <http://www.w3.org/2002/07/owl#onClass> <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> .
-_:genid9 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport> .
-_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid5 .
+_:genid5 <http://www.w3.org/2002/07/owl#onClass> <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> .
+_:genid5 <http://www.w3.org/2002/07/owl#minQualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid5 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport> .
+_:genid5 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "CityWithTransport"@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "Citys with 1 o more transports"@en .
@@ -843,8 +803,8 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#Event
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/2000/01/rdf-schema#comment> "A scheduled occasion such as a concert, festival, or sports competition."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Event> <http://www.w3.org/2000/01/rdf-schema#label> "Event" .
 # 
@@ -880,15 +840,33 @@ _:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/20
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid10 .
-_:genid10 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
-_:genid10 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
-_:genid10 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#name> .
-_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid6 .
+_:genid6 <http://www.w3.org/2002/07/owl#onDataRange> <http://www.w3.org/2001/XMLSchema#string> .
+_:genid6 <http://www.w3.org/2002/07/owl#qualifiedCardinality> "1"^^<http://www.w3.org/2001/XMLSchema#nonNegativeInteger> .
+_:genid6 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#name> .
+_:genid6 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2000/01/rdf-schema#comment> "A commercial establishment offering lodging and other services to travelers."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2000/01/rdf-schema#label> "Hotel"@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> <http://www.w3.org/2000/01/rdf-schema#seeAlso> <http://dbpedia.org/resource/Hotel> .
+# 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity
+<https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity> <http://www.w3.org/2002/07/owl#equivalentClass> _:genid7 .
+_:genid7 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+_:genid7 <http://www.w3.org/2002/07/owl#intersectionOf> _:genid10 .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> _:genid8 .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid9 .
+_:genid9 <http://www.w3.org/2002/07/owl#someValuesFrom> <https://danielgarciamesonero.github.io/pec2/ont.owl#City> .
+_:genid9 <http://www.w3.org/2002/07/owl#onProperty> <https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn> .
+_:genid9 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Restriction> .
+_:genid8 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> .
+_:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/1999/02/22-rdf-syntax-ns#List> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity> <http://www.w3.org/2000/01/rdf-schema#comment> "A hotel located within an urban area."@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity> <http://www.w3.org/2000/01/rdf-schema#label> "HotelInCity"@en .
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#LuxuryHotel
 <https://danielgarciamesonero.github.io/pec2/ont.owl#LuxuryHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
@@ -908,6 +886,11 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://danielgarciamesonero.github.io/pec2/ont.owl#MusicFestival> <http://www.w3.org/2000/01/rdf-schema#comment> "A multi-performance event dedicated to musical entertainment." .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#MusicFestival> <http://www.w3.org/2000/01/rdf-schema#label> "MusicFestival"@en .
 # 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity
+<https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "NamedEntity"@en .
+# 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#NaturalAttraction
 <https://danielgarciamesonero.github.io/pec2/ont.owl#NaturalAttraction> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#NaturalAttraction> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction> .
@@ -920,9 +903,21 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 <https://danielgarciamesonero.github.io/pec2/ont.owl#RailTransport> <http://www.w3.org/2000/01/rdf-schema#comment> "A form of transportation using trains or railways."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#RailTransport> <http://www.w3.org/2000/01/rdf-schema#label> "RailTransport"@en .
 # 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "RatedEntity"@en .
+# 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#comment> "Recommended Hotel"@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel> <http://www.w3.org/2000/01/rdf-schema#label> "RecommendedHotel"@en .
+# 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant> <http://www.w3.org/2000/01/rdf-schema#comment> "A place where meals are prepared and served to customers."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant> <http://www.w3.org/2000/01/rdf-schema#label> "Restaurant"@en .
 # 
@@ -934,9 +929,14 @@ _:genid10 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2
 # 
 # https://danielgarciamesonero.github.io/pec2/ont.owl#Transport
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
-<https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> <http://www.w3.org/2000/01/rdf-schema#subClassOf> <https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> <http://www.w3.org/2000/01/rdf-schema#comment> "A category encompassing means of travel or transit."@en .
 <https://danielgarciamesonero.github.io/pec2/ont.owl#Transport> <http://www.w3.org/2000/01/rdf-schema#label> "Transport"@en .
+# 
+# https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity
+<https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2002/07/owl#Class> .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> <http://www.w3.org/2000/01/rdf-schema#comment> "An entity that is classified by type, such as restaurants or attractions."@en .
+<https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity> <http://www.w3.org/2000/01/rdf-schema#label> "TypedEntity"@en .
 # 
 # 
 # 
@@ -3924,7 +3924,7 @@ _:genid19 <http://www.w3.org/2003/11/swrl#head> _:genid34 .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid35 .
 _:genid35 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> .
-_:genid35 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> .
+_:genid35 <http://www.w3.org/2003/11/swrl#classPredicate> <https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel> .
 _:genid35 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid34 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 _:genid36 <http://swrl.stanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled> "true"^^<http://www.w3.org/2001/XMLSchema#boolean> .
@@ -3962,7 +3962,7 @@ _:genid36 <http://www.w3.org/2003/11/swrl#head> _:genid45 .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#rest> <http://www.w3.org/1999/02/22-rdf-syntax-ns#nil> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#first> _:genid46 .
 _:genid46 <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h> .
-_:genid46 <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> .
+_:genid46 <http://www.w3.org/2003/11/swrl#classPredicate> <https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel> .
 _:genid46 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#ClassAtom> .
 _:genid45 <http://www.w3.org/1999/02/22-rdf-syntax-ns#type> <http://www.w3.org/2003/11/swrl#AtomList> .
 # Generated by the OWL API (version 5.1.18) https://github.com/owlcs/owlapi/

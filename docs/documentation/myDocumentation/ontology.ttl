@@ -681,23 +681,13 @@ xsd:date rdf:type rdfs:Datatype .
 #    Object Properties
 #################################################################
 
-###  http://www.co-ode.org/ontologies/ont.owl#hasLocation
-<http://www.co-ode.org/ontologies/ont.owl#hasLocation> rdf:type owl:ObjectProperty ;
-                                                       owl:inverseOf :locatedIn ;
-                                                       rdfs:domain :City ;
-                                                       rdfs:range owl:Thing ;
-                                                       rdfs:comment "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."@en ;
-                                                       rdfs:label "hasLocation"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy
-<http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy> rdf:type owl:ObjectProperty ;
-                                                         rdfs:subPropertyOf owl:topObjectProperty ;
-                                                         owl:inverseOf :organizesEvent ;
-                                                         rdfs:domain :Event ;
-                                                         rdfs:range :City ;
-                                                         rdfs:comment "Indicates the city or organization responsible for organizing a given event."@en ;
-                                                         rdfs:label "isOrgenizedBy" .
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation
+:hasLocation rdf:type owl:ObjectProperty ;
+             owl:inverseOf :locatedIn ;
+             rdfs:domain :City ;
+             rdfs:range owl:Thing ;
+             rdfs:comment "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."@en ;
+             rdfs:label "hasLocation"@en .
 
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport
@@ -706,6 +696,16 @@ xsd:date rdf:type rdfs:Datatype .
               rdfs:range :Transport ;
               rdfs:comment "Has transport"@en ;
               rdfs:label "hasTransport"@en .
+
+
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy
+:isOrganizedBy rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf :organizesEvent ;
+               rdfs:domain :Event ;
+               rdfs:range :City ;
+               rdfs:comment "Indicates the city or organization responsible for organizing a given event."@en ;
+               rdfs:label "isOrgenizedBy" .
 
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#isTransportIn
@@ -735,7 +735,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#assessment
 :assessment rdf:type owl:DatatypeProperty ;
-            rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ;
+            rdfs:domain :RatedEntity ;
             rdfs:range xsd:double ;
             rdfs:comment "A rating or evaluation score for the item (often based on user reviews or quality)."@en ;
             rdfs:label "assessment"@en .
@@ -783,7 +783,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#name
 :name rdf:type owl:DatatypeProperty ;
-      rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#NamedEntity> ;
+      rdfs:domain :NamedEntity ;
       rdfs:range xsd:string ;
       rdfs:comment "The name or title of the item."@en ;
       rdfs:label "name"@en .
@@ -807,7 +807,7 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#type
 :type rdf:type owl:DatatypeProperty ;
-      rdfs:domain <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+      rdfs:domain :TypedEntity ;
       rdfs:range xsd:string ;
       rdfs:comment "A general type or category of the item."@en ;
       rdfs:label "type"@en .
@@ -833,54 +833,6 @@ xsd:date rdf:type rdfs:Datatype .
 #    Classes
 #################################################################
 
-###  http://www.co-ode.org/ontologies/ont.owl#BudgetHotel
-<http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> rdf:type owl:Class ;
-                                                       rdfs:subClassOf :CityWithEvents ;
-                                                       rdfs:comment "A hotel that offers 5-star service at a price lower than 100€ per night." ;
-                                                       rdfs:label "BudgetHotel"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#HotelInCity
-<http://www.co-ode.org/ontologies/ont.owl#HotelInCity> rdf:type owl:Class ;
-                                                       owl:equivalentClass [ owl:intersectionOf ( :Hotel
-                                                                                                  [ rdf:type owl:Restriction ;
-                                                                                                    owl:onProperty :locatedIn ;
-                                                                                                    owl:someValuesFrom :City
-                                                                                                  ]
-                                                                                                ) ;
-                                                                             rdf:type owl:Class
-                                                                           ] ;
-                                                       rdfs:subClassOf :Hotel ;
-                                                       rdfs:comment "A hotel located within an urban area."@en ;
-                                                       rdfs:label "HotelInCity"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#NamedEntity
-<http://www.co-ode.org/ontologies/ont.owl#NamedEntity> rdf:type owl:Class ;
-                                                       rdfs:comment "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."@en ;
-                                                       rdfs:label "NamedEntity"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#RatedEntity
-<http://www.co-ode.org/ontologies/ont.owl#RatedEntity> rdf:type owl:Class ;
-                                                       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#NamedEntity> ;
-                                                       rdfs:comment "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."@en ;
-                                                       rdfs:label "RatedEntity"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel
-<http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> rdf:type owl:Class ;
-                                                            rdfs:subClassOf :Hotel ;
-                                                            rdfs:comment "Recommended Hotel"@en ;
-                                                            rdfs:label "RecommendedHotel"@en .
-
-
-###  http://www.co-ode.org/ontologies/ont.owl#TypedEntity
-<http://www.co-ode.org/ontologies/ont.owl#TypedEntity> rdf:type owl:Class ;
-                                                       rdfs:comment "An entity that is classified by type, such as restaurants or attractions."@en ;
-                                                       rdfs:label "TypedEntity"@en .
-
-
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#AirTransport
 :AirTransport rdf:type owl:Class ;
               rdfs:subClassOf :Transport ;
@@ -890,9 +842,16 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#Attraction
 :Attraction rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+            rdfs:subClassOf :TypedEntity ;
             rdfs:comment "A place or feature that attracts tourists or visitors"@en ;
             rdfs:label "Attraction"@en .
+
+
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel
+:BudgetHotel rdf:type owl:Class ;
+             rdfs:subClassOf :CityWithEvents ;
+             rdfs:comment "A hotel that offers 5-star service at a price lower than 100€ per night." ;
+             rdfs:label "BudgetHotel"@en .
 
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#BusTransport
@@ -952,8 +911,8 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#Event
 :Event rdf:type owl:Class ;
-       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ,
-                       <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+       rdfs:subClassOf :RatedEntity ,
+                       :TypedEntity ;
        rdfs:comment "A scheduled occasion such as a concert, festival, or sports competition."@en ;
        rdfs:label "Event" .
 
@@ -1000,10 +959,25 @@ xsd:date rdf:type rdfs:Datatype .
                              owl:qualifiedCardinality "1"^^xsd:nonNegativeInteger ;
                              owl:onDataRange xsd:string
                            ] ;
-       rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ;
+       rdfs:subClassOf :RatedEntity ;
        rdfs:comment "A commercial establishment offering lodging and other services to travelers."@en ;
        rdfs:label "Hotel"@en ;
        rdfs:seeAlso <http://dbpedia.org/resource/Hotel> .
+
+
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity
+:HotelInCity rdf:type owl:Class ;
+             owl:equivalentClass [ owl:intersectionOf ( :Hotel
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty :locatedIn ;
+                                                          owl:someValuesFrom :City
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf :Hotel ;
+             rdfs:comment "A hotel located within an urban area."@en ;
+             rdfs:label "HotelInCity"@en .
 
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#LuxuryHotel
@@ -1027,6 +1001,12 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "MusicFestival"@en .
 
 
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity
+:NamedEntity rdf:type owl:Class ;
+             rdfs:comment "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."@en ;
+             rdfs:label "NamedEntity"@en .
+
+
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#NaturalAttraction
 :NaturalAttraction rdf:type owl:Class ;
                    rdfs:subClassOf :Attraction ;
@@ -1041,9 +1021,23 @@ xsd:date rdf:type rdfs:Datatype .
                rdfs:label "RailTransport"@en .
 
 
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity
+:RatedEntity rdf:type owl:Class ;
+             rdfs:subClassOf :NamedEntity ;
+             rdfs:comment "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."@en ;
+             rdfs:label "RatedEntity"@en .
+
+
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel
+:RecommendedHotel rdf:type owl:Class ;
+                  rdfs:subClassOf :Hotel ;
+                  rdfs:comment "Recommended Hotel"@en ;
+                  rdfs:label "RecommendedHotel"@en .
+
+
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant
 :Restaurant rdf:type owl:Class ;
-            rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#RatedEntity> ;
+            rdfs:subClassOf :RatedEntity ;
             rdfs:comment "A place where meals are prepared and served to customers."@en ;
             rdfs:label "Restaurant"@en .
 
@@ -1057,9 +1051,15 @@ xsd:date rdf:type rdfs:Datatype .
 
 ###  https://danielgarciamesonero.github.io/pec2/ont.owl#Transport
 :Transport rdf:type owl:Class ;
-           rdfs:subClassOf <http://www.co-ode.org/ontologies/ont.owl#TypedEntity> ;
+           rdfs:subClassOf :TypedEntity ;
            rdfs:comment "A category encompassing means of travel or transit."@en ;
            rdfs:label "Transport"@en .
+
+
+###  https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity
+:TypedEntity rdf:type owl:Class ;
+             rdfs:comment "An entity that is classified by type, such as restaurants or attractions."@en ;
+             rdfs:label "TypedEntity"@en .
 
 
 #################################################################
@@ -4353,7 +4353,7 @@ xsd:date rdf:type rdfs:Datatype .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#BudgetHotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :BudgetHotel ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
                                                      ] ;
                                            rdf:rest rdf:nil
@@ -4392,7 +4392,7 @@ xsd:date rdf:type rdfs:Datatype .
                                          ] ;
    <http://www.w3.org/2003/11/swrl#head> [ rdf:type <http://www.w3.org/2003/11/swrl#AtomList> ;
                                            rdf:first [ rdf:type <http://www.w3.org/2003/11/swrl#ClassAtom> ;
-                                                       <http://www.w3.org/2003/11/swrl#classPredicate> <http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel> ;
+                                                       <http://www.w3.org/2003/11/swrl#classPredicate> :RecommendedHotel ;
                                                        <http://www.w3.org/2003/11/swrl#argument1> <http://www.w3.org/2002/07/h>
                                                      ] ;
                                            rdf:rest rdf:nil

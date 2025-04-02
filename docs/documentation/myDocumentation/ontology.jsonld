@@ -3,23 +3,10 @@
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
     "@list" : [ {
-      "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel"
+      "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
     }, {
       "@id" : "_:genid3"
     } ]
-  } ]
-}, {
-  "@id" : "_:genid10",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
-    "@id" : "http://www.w3.org/2001/XMLSchema#string"
-  } ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#name"
-  } ],
-  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
-    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
-    "@value" : "1"
   } ]
 }, {
   "@id" : "_:genid11",
@@ -153,10 +140,10 @@
   "@id" : "_:genid3",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent"
   } ],
   "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Event"
   } ]
 }, {
   "@id" : "_:genid31",
@@ -186,7 +173,7 @@
     "@id" : "http://www.w3.org/2002/07/h"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#BudgetHotel"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel"
   } ]
 }, {
   "@id" : "_:genid36",
@@ -257,29 +244,10 @@
     "@id" : "http://www.w3.org/2002/07/h"
   } ],
   "http://www.w3.org/2003/11/swrl#classPredicate" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel"
   } ]
 }, {
   "@id" : "_:genid5",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
-    "@list" : [ {
-      "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
-    }, {
-      "@id" : "_:genid7"
-    } ]
-  } ]
-}, {
-  "@id" : "_:genid7",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
-  "http://www.w3.org/2002/07/owl#onProperty" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent"
-  } ],
-  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Event"
-  } ]
-}, {
-  "@id" : "_:genid9",
   "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
   "http://www.w3.org/2002/07/owl#minQualifiedCardinality" : [ {
     "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
@@ -290,6 +258,38 @@
   } ],
   "http://www.w3.org/2002/07/owl#onProperty" : [ {
     "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport"
+  } ]
+}, {
+  "@id" : "_:genid6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onDataRange" : [ {
+    "@id" : "http://www.w3.org/2001/XMLSchema#string"
+  } ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#name"
+  } ],
+  "http://www.w3.org/2002/07/owl#qualifiedCardinality" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#nonNegativeInteger",
+    "@value" : "1"
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel"
+    }, {
+      "@id" : "_:genid9"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
   } ]
 }, {
   "@id" : "http://purl.org/dc/dcam/rangeIncludes",
@@ -1643,128 +1643,6 @@
   "@id" : "http://swrl.stcommentanford.edu/ontologies/3.3/swrla.owl#isRuleEnabled",
   "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
 }, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#BudgetHotel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@value" : "A hotel that offers 5-star service at a price lower than 100€ per night."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "BudgetHotel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#HotelInCity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A hotel located within an urban area."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "HotelInCity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel"
-  } ],
-  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid1"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#NamedEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "NamedEntity"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#RatedEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "RatedEntity"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#NamedEntity"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#RecommendedHotel",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Recommended Hotel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "RecommendedHotel"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#TypedEntity",
-  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "An entity that is classified by type, such as restaurants or attractions."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "TypedEntity"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#hasLocation",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@language" : "en",
-    "@value" : "hasLocation"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#Thing"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn"
-  } ]
-}, {
-  "@id" : "http://www.co-ode.org/ontologies/ont.owl#isOrganizedBy",
-  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
-  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
-    "@language" : "en",
-    "@value" : "Indicates the city or organization responsible for organizing a given event."
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Event"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
-    "@value" : "isOrgenizedBy"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
-  } ],
-  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
-    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
-  } ],
-  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
-    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent"
-  } ]
-}, {
   "@id" : "http://www.w3.org/2001/XMLSchema#date",
   "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
 }, {
@@ -1899,7 +1777,7 @@
     "@value" : "Attraction"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#TypedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Barcelona",
@@ -1928,6 +1806,19 @@
   } ],
   "https://danielgarciamesonero.github.io/pec2/organizesEvent" : [ {
     "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#CarnavalBilbao"
+  } ]
+}, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#BudgetHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@value" : "A hotel that offers 5-star service at a price lower than 100€ per night."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "BudgetHotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithEvents"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#BusTransport",
@@ -2608,7 +2499,7 @@
     "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid5"
+    "@id" : "_:genid1"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#CityWithTransport",
@@ -2624,7 +2515,7 @@
     "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid9"
+    "@id" : "_:genid5"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#ConciertoCádiz",
@@ -2966,9 +2857,9 @@
     "@value" : "Event"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RatedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity"
   }, {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#TypedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#FastFoodRestaurant",
@@ -3429,10 +3320,10 @@
     "@id" : "http://dbpedia.org/resource/Hotel"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RatedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity"
   } ],
   "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
-    "@id" : "_:genid10"
+    "@id" : "_:genid6"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#HotelDelMarBarcelona",
@@ -3771,6 +3662,23 @@
   } ],
   "https://danielgarciamesonero.github.io/pec2/typeHotel" : [ {
     "@value" : "Playa"
+  } ]
+}, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#HotelInCity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A hotel located within an urban area."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "HotelInCity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid7"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#HotelPalaceBarcelona",
@@ -5296,6 +5204,17 @@
     "@value" : "36.7213,-4.4210"
   } ]
 }, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "A general concept that represents any entity that can be identified by a name, such as cities, events, attractions, hotels, or restaurants. Used to unify domain usage of the name data property."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "NamedEntity"
+  } ]
+}, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#NaturalAttraction",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -5725,6 +5644,34 @@
     "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Transport"
   } ]
 }, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An abstract class representing any entity that can receive a rating or evaluation, such as hotels, restaurants or attractions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RatedEntity"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity"
+  } ]
+}, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RecommendedHotel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Recommended Hotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "RecommendedHotel"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Hotel"
+  } ]
+}, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Restaurant",
   "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -5736,7 +5683,7 @@
     "@value" : "Restaurant"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RatedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RestauranteDeliciaBarcelona",
@@ -7047,7 +6994,7 @@
     "@value" : "Transport"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#TypedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Transport_1",
@@ -8950,6 +8897,17 @@
     "@value" : "Taxi"
   } ]
 }, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An entity that is classified by type, such as restaurants or attractions."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "TypedEntity"
+  } ]
+}, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Valencia",
   "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
   "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
@@ -8978,7 +8936,7 @@
     "@value" : "A rating or evaluation score for the item (often based on user reviews or quality)."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#RatedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#RatedEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -9055,6 +9013,26 @@
     "@id" : "http://www.w3.org/2001/XMLSchema#string"
   } ]
 }, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#hasLocation",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the geographic location of an entity, typically linking a tourism service or event to the city where it takes place."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "hasLocation"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#Thing"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#locatedIn"
+  } ]
+}, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#hasTransport",
   "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
   "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
@@ -9070,6 +9048,28 @@
   } ],
   "http://www.w3.org/2000/01/rdf-schema#range" : [ {
     "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Transport"
+  } ]
+}, {
+  "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#isOrganizedBy",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Indicates the city or organization responsible for organizing a given event."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#Event"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "isOrgenizedBy"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#City"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#organizesEvent"
   } ]
 }, {
   "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#isTransportIn",
@@ -9120,7 +9120,7 @@
     "@value" : "The name or title of the item."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#NamedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#NamedEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
@@ -9188,7 +9188,7 @@
     "@value" : "A general type or category of the item."
   } ],
   "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
-    "@id" : "http://www.co-ode.org/ontologies/ont.owl#TypedEntity"
+    "@id" : "https://danielgarciamesonero.github.io/pec2/ont.owl#TypedEntity"
   } ],
   "http://www.w3.org/2000/01/rdf-schema#label" : [ {
     "@language" : "en",
