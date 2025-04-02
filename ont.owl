@@ -5,9 +5,10 @@
     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
     xmlns:dc="http://purl.org/dc/elements/1.1/"
     xmlns:dcterms="http://purl.org/dc/terms/"
+ 
     xmlns:ex="https://danielgarciamesonero.github.io/pec2/ont.owl#"
+    
     xml:base="https://danielgarciamesonero.github.io/pec2/ont.owl">
-    <owl:Ontology rdf:about="https://danielgarciamesonero.github.io/pec2/ont.owl">
         <dc:description xml:lang="en">Models key tourism elements such as attractions, events, hotels, restaurants, and transport in a structured way. It facilitates the analysis and reuse of tourism knowledge in urban environments for smart applications.</dc:description>
         <dc:title xml:lang="en">Smart Tourism and Recommendations Ontology</dc:title>
         <dcterms:created rdf:datatype="http://www.w3.org/2001/XMLSchema#date">2025-04-01</dcterms:created>
@@ -17,7 +18,7 @@
         <owl:versionInfo rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1.0</owl:versionInfo>
 
 <dcterms:license rdf:resource="https://creativecommons.org/licenses/by/4.0/"/>
-<owl:versionIRI rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl/1.0"/>
+<owl:versionIRI rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl"/>
 <rdfs:isDefinedBy rdf:resource="https://danielgarciamesonero.github.io/pec2/ont.owl#"/>
 
 
