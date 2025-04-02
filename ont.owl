@@ -1,3 +1,17 @@
+<?xml version="1.0"?>
+<rdf:RDF
+    xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+    xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+    xmlns:owl="http://www.w3.org/2002/07/owl#"
+    xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+    xmlns:dc="http://purl.org/dc/elements/1.1/"
+    xmlns:dcterms="http://purl.org/dc/terms/"
+    xmlns:dcam="http://purl.org/dc/dcam/"
+    xmlns:ex="https://danielgarciamesonero.github.io/pec2/ont.owl#"
+    xmlns:swrla1="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xmlns:swrl="http://www.w3.org/2003/11/swrl#"
+    xmlns:swrla="http://swrl.stanford.edu/ontologies/3.3/swrla.owl#"
+    xml:base="https://danielgarciamesonero.github.io/pec2/ont.owl">
 <owl:Ontology rdf:about="https://danielgarciamesonero.github.io/pec2/ont.owl">
     
     <!-- Descripción general -->
@@ -167,8 +181,7 @@
     <!-- http://purl.org/dc/terms/accrualMethod -->
 
     <owl:AnnotationProperty rdf:about="http://purl.org/dc/terms/accrualMethod">
-        <dcterms:description xml:lang="en">Recommended practice is to use a value from the Collection Description Accrual Method Vocabulary [[DCMI-ACCRUALMETHOD](https://dublincore.org/groups/collections/accrual-method/)].</dcterms:description>
-        <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
+                <rdfs:comment xml:lang="en">The method by which items are added to a collection.</rdfs:comment>
         <rdfs:isDefinedBy rdf:resource="http://purl.org/dc/terms/"/>
         <rdfs:label xml:lang="en">Accrual Method</rdfs:label>
         <rdfs:domain rdf:resource="http://purl.org/dc/dcmitype/Collection"/>
@@ -5555,7 +5568,7 @@
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Variable"/>
     </rdf:Description>
     <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <swrla1:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla1:isRuleEnabled>
         <rdfs:comment>comment</rdfs:comment>
         <rdfs:label>S2</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
@@ -5600,7 +5613,7 @@
         </swrl:head>
     </rdf:Description>
     <rdf:Description>
-        <swrla:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla:isRuleEnabled>
+        <swrla1:isRuleEnabled rdf:datatype="http://www.w3.org/2001/XMLSchema#boolean">true</swrla1:isRuleEnabled>
         <rdfs:comment>comment</rdfs:comment>
         <rdfs:label>S1</rdfs:label>
         <rdf:type rdf:resource="http://www.w3.org/2003/11/swrl#Imp"/>
